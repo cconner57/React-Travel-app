@@ -1,0 +1,53 @@
+@import './../CSSReset.css';
+@import './../App.scss';
+
+nav {
+	position: fixed;
+	@include Center(space-between);
+	background: $accent;
+	height: 6vh;
+	width: 100vw;
+	z-index: 10;
+	transition: all 1s;
+	box-shadow: $boxshadow;
+	.Nav__Company {
+		font-size: 1.9rem;
+		margin: 10px 40px;
+		font-family: 'Righteous', cursive;
+		color: $text;
+	}
+	.Nav__Links {
+		display: flex;
+		justify-content: space-between;
+		width: 550px;
+	}
+	.Nav__Login {
+		margin-right: 5%;
+	}
+	a,
+	p {
+		color: $text;
+		transition: color .5s;
+		cursor: pointer;
+		text-decoration: none;
+		font-size: 1.25rem;
+	}
+	a:hover,
+	p:hover {
+		color: $hover;
+	}
+}
+
+.Nav__Active {
+	background: $modal-bg;
+	border-radius: 50px;
+	transform: translate(2.5%, 10px);
+	width: 95vw;
+	.Nav__Company, .Nav__Links > a, .Nav__Login {
+		color: $text;
+		transition: color .5s;
+	}
+	.Nav__Company:hover, .Nav__Links > a:hover, .Nav__Login:hover {
+		color: $hover;
+	}
+}

@@ -1,26 +1,35 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import NavBar from './Navbar/NavBar';
+import Main from './Home/Main';
+import Guide from './Home/Guide';
+import USMap from './Map/Map';
+import Events from './Events/Events'
+import Store from './Store/Store'
+import Discussion from './Discussion/Discussion'
+import Footer from './Footer/Footer';
+
+import './App.scss';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<Router>
+			<div className='App-Container'>
+				<NavBar />
+				<Switch>
+					<Route exact path='/'>
+						<Main />
+						<Guide />
+					</Route>
+					<Route path='/bucket-list' component={USMap} />
+					<Route path='/events' component={Events} />
+					<Route path='/store' component={Store} />
+					<Route path='/discussion' component={Discussion} />
+				</Switch>
+				<Footer />
+			</div>
+		</Router>
+	);
 }
 
 export default App;

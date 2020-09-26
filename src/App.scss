@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:wght@300;400;700&display=swap');
+
+$text: hsl(0, 0%, 100%);
+$alttext: hsl(219, 18%, 15%);
+$heading: hsla(210, 3%, 40%, .6);
+$background: hsl(0, 0%, 100%);
+$modal-bg: hsla(210, 3%, 40%, .6);
+$link: hsl(216, 22%, 91%);
+$accent: hsl(210, 100%, 50%);
+$hover: hsl(205, 100%, 50%);
+$error: hsl(10, 100%, 40%);
+$boxshadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+
+@mixin Modal-Container {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	padding: 50px;
+	z-index: 100;
+	background: $background;
+	border-radius: 7px;
+	box-shadow: $boxshadow;
+	animation: fadeIn 1s ease;
+}
+
+@mixin Center($area: center) {
+	display: flex;
+	justify-content: $area;
+	align-items: center;
+}
+
+.App-Container {
+	position: relative;
+	font-family: 'Roboto Condensed', sans-serif;
+}
+
+.Modal-Container {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 20;
+	background: $modal-bg;
+}
+
+@keyframes fadeIn {
+	from {
+		opacity: 0;
+	}
+
+	to {
+		opacity: 1;
+	}
+}

@@ -1,0 +1,36 @@
+.Events__Container {
+	max-height: 90vh;
+	width: 100vw;
+	margin-bottom: 5vh;
+	display: flex;
+	flex-direction: column;
+	// align-items: center;
+	.Events__ItemList:first-child {
+		margin-top: 60px;
+	}
+	.Events__ItemList {
+		// display: grid;
+		// grid-template-columns: 30vw 70vw;
+		margin: 5px 0;
+
+		.Events__Month {
+			font-size: 20px;
+			font-weight: bold;
+			// width: 100px;
+		}
+		.Events__Item {
+			// padding: 20px;
+			// border: 1px solid grey;
+			// border-radius: 7px;
+			// width: 300px;
+			// box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+		}
+
+		.Events__Date {
+			font-size: 12px;
+		}
+		.Events__Name {
+			font-size: 14px;
+		}
+	}
+}
