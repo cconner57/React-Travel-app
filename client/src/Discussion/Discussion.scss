@@ -1,0 +1,206 @@
+@import './../CSSReset.css';
+@import './../App.scss';
+
+.Discussion {
+	height: 95vh;
+	width: 100vw;
+	display: flex;
+	&__Category {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: space-evenly;
+		padding: 70px 0 20px 10px;
+		width: 20vw;
+		background-color: $hover;
+		box-shadow: 10px 0px 5px 0px rgba(0, 0, 0, 0.5);
+		hr {
+			border: 1px solid $alttext;
+			width: 70%;
+		}
+	}
+	&__CategoryItem {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		margin: 5px 0;
+		height: 45%;
+		width: 80%;
+		cursor: pointer;
+		transition: all 0.5s;
+		h5 {
+			font-size: 22px;
+			margin: 5px 0;
+			color: $text;
+			font-weight: bold;
+		}
+		p {
+			font-size: 14px;
+			color: $text;
+		}
+	}
+	&__CategoryItem:hover {
+		border-radius: 7px;
+		// border-left: 1px 1px 1px 5px solid white;
+		transform: scale(1.1);
+		box-shadow: $boxshadow;
+	}
+	&__Topic {
+		padding: 6% 50px;
+		width: 40vw;
+		background-color: hsl(210, 3%, 90%);
+		box-shadow: inset 7px 0px 10px 0px rgba(0, 0, 0, 0.4);
+		overflow: auto;
+		hr {
+			border: 1px solid $alttext;
+		}
+	}
+	&__Heading {
+		display: flex;
+		justify-content: space-between;
+		padding-bottom: 15px;
+		p {
+			font-size: 36px;
+			color: $accent;
+			font-weight: bold;
+			user-select: none;
+			margin: auto 0;
+		}
+		button {
+			background-color: $accent;
+			color: $text;
+			padding: 10px;
+			border: none;
+			border-radius: 7px;
+			font-size: 18px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: box-shadow 0.25s;
+		}
+		button:hover {
+			box-shadow: $boxshadow;
+		}
+	}
+	&__Item {
+		padding: 15px;
+		border: 2px solid $accent;
+		background-color: $text;
+		border-radius: 7px;
+		cursor: pointer;
+		margin: 10px 0;
+		transition: all 0.5s;
+		h5 {
+			color: $accent;
+			font-weight: bold;
+			margin-bottom: 5px;
+		}
+		p {
+			color: $alttext;
+		}
+	}
+	&__Item + hr {
+		width: 250px;
+	}
+	&__Item:hover {
+		box-shadow: $boxshadow;
+		transform: scale(1.025);
+	}
+	&__Post {
+		overflow: auto;
+		padding: 6% 30px 0;
+		width: 40vw;
+		background-color: $text;
+		box-shadow: inset 7px 0px 10px 0px rgba(0, 0, 0, 0.4);
+		overflow: auto;
+	}
+	&__PostItem {
+		h4 {
+			font-size: 28px;
+			margin-bottom: 15px;
+		}
+		h5 {
+			font-size: 14px;
+		}
+		p {
+			height: 100%;
+			padding: 10px;
+			font-size: 16px;
+			margin: 10px 0;
+			border: 2px solid $accent;
+			border-radius: 7px;
+		}
+		button {
+			margin-left: 85%;
+			padding: 10px 15px;
+			color: $alttext;
+			background-color: $accent;
+			border: none;
+			border-radius: 7px;
+			color: $text;
+			font-size: 18px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: box-shadow 0.25s;
+		}
+		button:hover {
+			box-shadow: $boxshadow;
+		}
+	}
+	&__Form {
+		display: flex;
+		flex-direction: column;
+		padding: 0 50px;
+	}
+	&__FormHeading {
+		font-weight: bold;
+		font-size: 1.75rem;
+		width: 150px;
+		margin: 0 auto;
+		color: $heading;
+		text-align: center;
+		user-select: none;
+		span {
+			color: $accent;
+		}
+	}
+	&__Label {
+		margin: 20px 0 5px;
+		font-size: 1.2rem;
+		color: $heading;
+		font-weight: 500;
+	}
+	&__Input {
+		border: 0;
+		border-bottom: 2px solid $heading;
+		color: $alttext;
+		font-size: 1rem;
+	}
+	&__Input:focus {
+		outline: none;
+		border-color: $accent;
+	}
+	&__Textarea {
+		font-family: 'Roboto Condensed', sans-serif;
+		height: 200px;
+		padding: 10px 0 0 10px;
+		font-size: 16px;
+		border: 2px solid $heading;
+		border-radius: 7px;
+		resize: none;
+	}
+	&__Submit {
+		margin: 30px auto 0px;
+		padding: 15px 0;
+		width: 150px;
+		cursor: pointer;
+		border: none;
+		border-radius: 7px;
+		color: hsl(205, 100%, 100%);
+		background-color: $accent;
+		font-size: 1.1rem;
+	}
+	&__Submit:hover {
+		background-color: $hover;
+	}
+}
