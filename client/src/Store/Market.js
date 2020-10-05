@@ -1,7 +1,7 @@
 import React from 'react'
-import './Store.scss'
+import './Market.scss'
 
-const Store = () => {
+const Market = () => {
     return (
         <div className='Store__Container'>
             <h1>Future Store</h1>
@@ -9,4 +9,4 @@ const Store = () => {
     )
 }
 
-export default Store
+export default Market

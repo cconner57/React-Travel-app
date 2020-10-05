@@ -9,27 +9,29 @@
 	width: 100vw;
 	z-index: 10;
 	transition: all 1s;
-	> p {
+	p {
 		font-size: 0.75rem;
-		padding-left: 20px;
+		padding-left: 30px;
 		user-select: none;
+		color: $text;
 	}
 	.Footer__Links {
 		display: flex;
+		justify-content: space-between;
 		color: $text;
-		margin: 0 20px;
-		p {
-			margin-left: 30px;
+		padding-right: 50px;
+		width: 400px;
+		a {
+			color: $text;
+			text-decoration: none;
+			padding-left: 30px;
 			font-weight: bold;
 			transition: color 0.5s;
 		}
-		p:hover {
+		a:hover {
 			cursor: pointer;
 			color: $hover;
 		}
-	}
-	p {
-		color: $text;
 	}
 }
 
@@ -178,8 +180,26 @@
 	}
 }
 
-.Settings-Container {
+.Settings {
 	@include Modal-Container();
+	&__Roadmap {
+		h1 {
+			text-align: center;
+			font-size: 30px;
+			font-weight: bold;
+			padding-bottom: 15px;
+			text-decoration: underline;
+		}
+		ul {
+			list-style: outside;
+			padding: 0 5px;
+		}
+	}
+	h1:nth-child(3) {
+		text-align: center;
+		padding: 20px 10px 10px;
+		font-size: 20px;
+	}
 }
 
 .Error {

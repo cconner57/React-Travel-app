@@ -1,8 +1,9 @@
 import React, { useState, useRef } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import './Login-Signup.scss'
 
-const Signup = ({ onClose }) => {
+const Signup = () => {
 	const [form, setForm] = useState({
 		email: '',
 		password: '',
@@ -22,12 +23,19 @@ const Signup = ({ onClose }) => {
 		setForm({ ...form, [e.target.name]: e.target.value });
 	};
 
+	let history = useHistory();
+
+	let back = (e) => {
+		e.stopPropagation();
+		history.goBack();
+	};
+
 	return (
 		<form
 			className='Signup'
 			onSubmit={(e) => e.preventDefault()}
 			autoComplete='on'>
-			<p className='Close' onClick={onClose}>
+			<p className='Close' onClick={back}>
 				&#x2715;
 			</p>
 			<h4 className='Signup__Heading'><span>Create</span> your account</h4>

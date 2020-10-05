@@ -57,19 +57,6 @@
 	&__Submit:hover {
 		background-color: $hover;
 	}
-
-	.Signup__Link {
-		margin-top: 5px;
-		font-size: 1rem;
-		color: $alttext;
-		span {
-			color: $accent;
-		}
-		span:hover {
-			color: $hover;
-			cursor: pointer;
-		}
-	}
 }
 
 .Signup {

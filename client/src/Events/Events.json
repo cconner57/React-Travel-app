@@ -4,43 +4,43 @@
 			"Date": "January 1st",
 			"Name": "California Rose Parade",
 			"Location": "Pasadena, California",
-			"Picture": "new-years.jpg"
+			"Picture": "new-years.webp"
 		},
 		{
 			"Date": "January 1st",
 			"Name": "Philadelphia Mummers Parade",
 			"Location": "Philadelphia, Pennsylvania",
-			"Picture": "parade.jpg"
+			"Picture": "parade.webp"
 		},
 		{
 			"Date": "January 6th",
 			"Name": "Three Kings Day Parade",
 			"Location": "New York City, New York",
-			"Picture": "parade.jpg"
+			"Picture": "parade.webp"
 		},
 		{
 			"Date": "January 17 - 19th",
 			"Name": "Florida Art Deco Weekend",
 			"Location": "Miami, Florid",
-			"Picture": "art.jpg"
+			"Picture": "art.webp"
 		},
 		{
 			"Date": "January 23 - February 2nd",
 			"Name": "Sundance Film Festival",
 			"Location": "Salt Lake City, Utah",
-			"Picture": "film.jpg"
+			"Picture": "film.webp"
 		},
 		{
 			"Date": "January 25th",
 			"Name": "Stock Show and Rodeo",
 			"Location": "Fort Worth, Texas",
-			"Picture": "rodeo.jpg"
+			"Picture": "rodeo.webp"
 		},
 		{
 			"Date": "January 17 - February 8th",
 			"Name": "Chinese New Year Parade and Festival",
 			"Location": "New York City, New York",
-			"Picture": "chinesenewyear.jpg"
+			"Picture": "chinesenewyear.webp"
 		}
 	],
 	"February": [
@@ -48,13 +48,13 @@
 			"Date": "February 14 - 25th",
 			"Name": "Mardi Gras Galveston",
 			"Location": "Galveston, Texas",
-			"Picture": "mardigras.jpg"
+			"Picture": "mardigras.webp"
 		},
 		{
 			"Date": "February 16",
 			"Name": "Daytona 500",
 			"Location": "Daytona Beach, Florida",
-			"Picture": "racecar.jpg"
+			"Picture": "racecar.webp"
 		}
 	],
 	"March": [
@@ -62,55 +62,55 @@
 			"Date": "March 7th",
 			"Name": "Iditarod National Historic Trail",
 			"Location": "Anchorage, Alaska",
-			"Picture": "dograce.jpg"
+			"Picture": "dograce.webp"
 		},
 		{
 			"Date": "March 3 - 22nd",
 			"Name": "Houston Livestock Show and Rodeo",
 			"Location": "Houston, Texas",
-			"Picture": "rodeo.jpg"
+			"Picture": "rodeo.webp"
 		},
 		{
 			"Date": "March 5th",
 			"Name": "Mardi Gras",
 			"Location": "New Orleans, Louisiana",
-			"Picture": "mardigras.jpg"
+			"Picture": "mardigras.webp"
 		},
 		{
 			"Date": "March 8 - 17th",
 			"Name": "Bike Week",
 			"Location": "Daytona, Florida",
-			"Picture": "bike.jpg"
+			"Picture": "bike.webp"
 		},
 		{
 			"Date": "March 8 - 17th",
 			"Name": "South by Southwest Week",
 			"Location": "Austin, Texas",
-			"Picture": "film.jpg"
+			"Picture": "film.webp"
 		},
 		{
 			"Date": "March 15th",
 			"Name": "St Patrick's Day Parade",
 			"Location": "Chicago, Illinois",
-			"Picture": "stpatrick.jpg"
+			"Picture": "stpatrick.webp"
 		},
 		{
 			"Date": "March 15th",
 			"Name": "St Patrick's Day Parade",
 			"Location": "Boston, Massachusetts",
-			"Picture": "stpatrick.jpg"
+			"Picture": "stpatrick.webp"
 		},
 		{
 			"Date": "March 15th",
 			"Name": "St Patrick's Day Parade",
 			"Location": "New York City, New York",
-			"Picture": "stpatrick.jpg"
+			"Picture": "stpatrick.webp"
 		},
 		{
 			"Date": "March 15th",
 			"Name": "St Patrick's Day Parade",
 			"Location": "San Francisco, California",
-			"Picture": "stpatrick.jpg"
+			"Picture": "stpatrick.webp"
 		}
 	],
 	"April": [
@@ -118,25 +118,25 @@
 			"Date": "April 10 - 12th",
 			"Name": "Coachella Valley Music and Art Festival",
 			"Location": "California",
-			"Picture": "concert.jpg"
+			"Picture": "concert.webp"
 		},
 		{
 			"Date": "April 17 - 19th",
 			"Name": "Coachella Valley Music and Art Festival",
 			"Location": "California",
-			"Picture": "concert.jpg"
+			"Picture": "concert.webp"
 		},
 		{
 			"Date": "April 16 - 26th",
 			"Name": "Fiesta San Antonio",
 			"Location": "San Antonio, Texas",
-			"Picture": "fiesta.jpg"
+			"Picture": "fiesta.webp"
 		},
 		{
 			"Date": "April 23 - May 3rd",
 			"Name": "New Orleans Jazz and Heritage Festival",
 			"Location": "New Orleans, Louisiana",
-			"Picture": "jazz.jpg"
+			"Picture": "jazz.webp"
 		}
 	],
 	"May": [

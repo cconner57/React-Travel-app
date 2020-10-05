@@ -1,12 +1,15 @@
 import React, { useEffect, useCallback } from 'react';
 import ReactDom from 'react-dom';
+import {useHistory} from 'react-router-dom'
 import './App.scss';
 
-const Modal = ({ onClose, children }) => {
+const Modal = ({ children }) => {
+	let history = useHistory();
+
 	const handleOutsideClick = useCallback((e) => {
-		const outsideForm = document.querySelector('.Modal-Container');
-		if (e.target === outsideForm) onClose();
-	}, [onClose]);
+		const outsideForm = document.querySelector('.Modal');
+		if (e.target === outsideForm) history.goBack();
+	}, [history]);
 
 	useEffect(() => {
 		window.addEventListener('click', handleOutsideClick);
@@ -16,7 +19,7 @@ const Modal = ({ onClose, children }) => {
 	}, [handleOutsideClick]);
 
 	return ReactDom.createPortal(
-		<div className='Modal-Container'>{children}</div>,
+		<div className='Modal'>{children}</div>,
 		document.getElementById('modal')
 	);
 };

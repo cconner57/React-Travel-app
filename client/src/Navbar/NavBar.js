@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import Modal from '../Modal';
-import Login from '../Login-Signup/Login';
-import { Link } from 'react-router-dom';
-import './Navbar.scss'
+import { useLocation, Link } from 'react-router-dom';
+import './Navbar.scss';
 
 const NavBar = () => {
 	const [show, handleNav] = useState(false);
-	const [showLogin, setShowLogin] = useState(false);
+
+	let location = useLocation();
 
 	const windowTransition = () => {
 		if (window.scrollY > 50) {
@@ -23,7 +22,7 @@ const NavBar = () => {
 
 	return (
 		<nav className={show ? 'Nav__Active' : ''}>
-			<Link className='Nav__Company' to='/'>
+			<Link className='Nav__Company' to='/home'>
 				Buddy Planner
 			</Link>
 			<div className='Nav__Links'>
@@ -32,14 +31,22 @@ const NavBar = () => {
 				<Link to='/store'>Store</Link>
 				<Link to='/discussion'>Discussion</Link>
 			</div>
-			<p className='Nav__Login' onClick={() => setShowLogin(true)}>
+			<Link
+				className='Nav__Login'
+				to={{
+					pathname: `${location.pathname}/login`,
+					state: { background: location },
+				}}>
 				Login
-			</p>
-			{showLogin && (
-				<Modal onClose={() => setShowLogin(false)}>
-					<Login onClose={() => setShowLogin(false)} />
-				</Modal>
-			)}
+			</Link>
+			<Link
+				className='Nav__Signup'
+				to={{
+					pathname: `${location.pathname}/signup`,
+					state: { background: location },
+				}}>
+				Sign Up
+			</Link>
 		</nav>
 	);
 };

@@ -15,7 +15,7 @@ const Events = () => {
 									className='Events__Item'
 									key={key}
 									style={{
-										background: `url('/${event.Picture}') no-repeat`,
+										background: `url('/Images/${event.Picture}') no-repeat`,
 										backgroundSize: 'cover',
 									}}>
 									<div className='Events__ItemOverlay'>

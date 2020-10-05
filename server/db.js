@@ -1,11 +1,10 @@
-const Pool = require('pg').Pool;
+const { Client } = require('pg');
+const { DB_URI } = require('./config');
 
-const pool = new Pool({
-	user: 'postgres',
-	password: 'kth18822',
-	host: 'localhost',
-	port: 5432,
-	database: 'perntodo',
+const db = new Client({
+	connectionString: DB_URI,
 });
 
-module.exports = pool;
+db.connect();
+
+module.exports = db;

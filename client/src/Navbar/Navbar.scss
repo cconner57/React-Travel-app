@@ -5,7 +5,7 @@ nav {
 	position: fixed;
 	@include Center(space-between);
 	background: $accent;
-	height: 6vh;
+	height: 5vh;
 	width: 100vw;
 	z-index: 10;
 	transition: all 1s;
@@ -21,7 +21,7 @@ nav {
 		justify-content: space-between;
 		width: 550px;
 	}
-	.Nav__Login {
+	.Nav__Signup {
 		margin-right: 5%;
 	}
 	a,

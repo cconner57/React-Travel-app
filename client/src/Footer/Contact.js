@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import './Footer.scss'
+import './Footer.scss';
 
-const Contact = ({ onClose }) => {
+const Contact = () => {
 	const [isSubmitted, setIsSubmitted] = useState(false);
 	const [form, setForm] = useState({ name: '', email: '', message: '' });
 
@@ -16,20 +17,29 @@ const Contact = ({ onClose }) => {
 		setForm({ ...form, [e.target.name]: e.target.value });
 	};
 
+	let history = useHistory();
+
+	let back = (e) => {
+		e.stopPropagation();
+		history.goBack();
+	};
+
 	if (!isSubmitted) {
 		return (
 			<form
 				className='Contact'
 				onSubmit={(e) => e.preventDefault()}
 				autoComplete='on'>
-				<p className='Close' onClick={onClose}>
+				<p className='Close' onClick={back}>
 					&#x2715;
 				</p>
 				<div className='Contact__Heading'>
 					<h4>Contact</h4>
 					<h4>Us</h4>
 				</div>
-				<label htmlFor='given-name' className='Contact__Label'>Name</label>
+				<label htmlFor='given-name' className='Contact__Label'>
+					Name
+				</label>
 				<input
 					id='given-name'
 					className='Contact__InputName'
@@ -43,7 +53,9 @@ const Contact = ({ onClose }) => {
 					onChange={handleChange}
 				/>
 				{errors.name && <p className='Error'>{errors.name.message}</p>}
-				<label htmlFor='email' className='Contact__Label'>Email</label>
+				<label htmlFor='email' className='Contact__Label'>
+					Email
+				</label>
 				<input
 					id='email'
 					className='Contact__InputEmail'
@@ -56,7 +68,9 @@ const Contact = ({ onClose }) => {
 					onChange={handleChange}
 				/>
 				{errors.email && <p className='Error'>• Email must be valid</p>}
-				<label htmlFor='message' className='Contact__Label'>Enter Message</label>
+				<label htmlFor='message' className='Contact__Label'>
+					Enter Message
+				</label>
 				<textarea
 					className='Contact__InputMessage'
 					name='message'
@@ -83,7 +97,7 @@ const Contact = ({ onClose }) => {
 	} else if (isSubmitted) {
 		return (
 			<div className='Contact'>
-				<p className='Close' onClick={onClose}>
+				<p className='Close' onClick={back}>
 					&#x2715;
 				</p>
 				<div className='Contact__Sent'>

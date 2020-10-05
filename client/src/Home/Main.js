@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import './Home.scss'
+import Guide from './Guide';
+import './Home.scss';
 
 const Main = () => {
 	const [hide, handleBox] = useState(false);
@@ -32,16 +33,19 @@ const Main = () => {
 	}, []);
 
 	return (
-		<div className='Landing'>
-			<video className='Landing__Background' loop muted autoPlay>
-				<source src='./background-video.mp4' type='video/mp4' />
-			</video>
-			<h5 className='Landing__Caption'>{content}</h5>
-			<div className={`Landing__Box ${hide && box.classList.add('HideBox')}`}>
-				<p>See More</p>
-				<img className='Arrow' src='./down-arrow.png' alt='See More' />
+		<>
+			<div className='Landing'>
+				<video className='Landing__Background' loop muted autoPlay>
+					<source src='./background-video.mp4' type='video/mp4' />
+				</video>
+				<h5 className='Landing__Caption'>{content}</h5>
+				<div className={`Landing__Box ${hide && box.classList.add('HideBox')}`}>
+					<p>See More</p>
+					<img className='Arrow' src='./down-arrow.png' alt='See More' />
+				</div>
 			</div>
-		</div>
+			<Guide />
+		</>
 	);
 };
 

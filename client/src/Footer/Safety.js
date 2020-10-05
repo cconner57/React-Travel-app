@@ -1,10 +1,18 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 import './Footer.scss'
 
-const Safety = ({onClose}) => {
+const Safety = () => {
+	let history = useHistory();
+
+	let back = (e) => {
+		e.stopPropagation();
+		history.goBack();
+	};
+
 	return (
 		<div className='Safety-Container'>
-			<p className='Close' onClick={onClose}>
+			<p className='Close' onClick={back}>
 				&#x2715;
 			</p>
 			<h5>COVID-19 Traveler Information</h5>
