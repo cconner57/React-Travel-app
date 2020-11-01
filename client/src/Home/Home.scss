@@ -62,6 +62,7 @@
 	@include Center();
 	user-select: none;
 	width: 100vw;
+	height: 95vh;
 	flex-direction: column;
 	font-weight: bold;
 	&__Title {
