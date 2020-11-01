@@ -1,13 +1,15 @@
-import React from 'react'
-import './Login-Signup.scss'
+import React from 'react';
+import './Login-Signup.scss';
 
 const LoginError = () => {
-    return (
-        <div className='LoginError'>
-            <div className='LoginError__Image'></div>
-            <h5>Must be logged in to use this section</h5>
-        </div>
-    )
-}
+	return (
+		<div className='LoginError'>
+			<div className='LoginError__Background'>
+				<div className='LoginError__Image'></div>
+				<h5>Must be logged in to use this section</h5>
+			</div>
+		</div>
+	);
+};
 
-export default LoginError
+export default LoginError;

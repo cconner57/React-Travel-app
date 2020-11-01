@@ -5,6 +5,8 @@
 	height: 95vh;
 	width: 100vw;
 	display: flex;
+	position: relative;
+	z-index: 1;
 	&__Category {
 		display: flex;
 		flex-direction: column;

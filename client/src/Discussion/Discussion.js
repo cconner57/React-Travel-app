@@ -13,7 +13,7 @@ import './Discussion.scss';
 const Discussion = () => {
 	const post = useSelector((state) => state.postReducer.data);
 	const comment = useSelector((state) => state.commentReducer.data);
-	const loggedIn = sessionStorage.getItem("loggedIn");
+	const loggedIn = sessionStorage.getItem('loggedIn');
 	const name = JSON.parse(sessionStorage.getItem('userInfo'));
 	const dispatch = useDispatch();
 
@@ -107,82 +107,79 @@ const Discussion = () => {
 	};
 
 	const replies = (num) => {
-		const numReplies = comment.filter((comment) => comment.post_id === num)
-		return numReplies.length
-	}
+		const numReplies = comment.filter((comment) => comment.post_id === num);
+		return numReplies.length;
+	};
 
-	if (loggedIn) {
-		return (
-			<div className='Discussion'>
-				<div className='Discussion__Category'>
-					{category &&
-						category.map((category, key) => (
-							<DiscussionCategory
-								key={key}
-								name={category.name}
-								post={postNumbers(category.id)}
-								select={() => setSelectedCategory(category)}
-							/>
-						))}
-				</div>
-				<div className='Discussion__Topic'>
-					<div className='Discussion__Heading'>
-						<p>{selectedCategory.name}</p>
-						<button
-							onClick={() => {
-								setSelectedPost('');
-								setAddPost({ title: '', content: '' });
-							}}>
-							New Post
-						</button>
-					</div>
-					<hr />
-					{post &&
-						post
-							.filter((post) => post.category_id === selectedCategory.id)
-							.map((post, id) => {
-								return (
-									<DiscussionItem
-										key={id}
-										post={post}
-										user={users}
-										comments={comment}
-										age={modifyDate(post.created_at)}
-										replies={replies}
-										selectPost={setSelectedPost}
-									/>
-								);
-							})}
-				</div>
-				<div className='Discussion__Post'>
-					{(selectedPost &&
-						post
-							.filter((post) => post.id === selectedPost)
-							.map((post, id) => {
-								return (
-									<DiscussionPost
-										key={id}
-										post={post}
-										user={users}
-										makeComment={submitComment}
-										handleComment={handleComment}
-										comments={comment}
-										modifyDate={modifyDate}
-									/>
-								);
-							})) || (
-						<DiscussionForm
-							makePost={handleSubmit}
-							handleChange={handleChange}
-							newPost={addPost}
+	return (
+		<div className='Discussion'>
+			{!loggedIn && <LoginError />}
+			<div className='Discussion__Category'>
+				{category &&
+					category.map((category, key) => (
+						<DiscussionCategory
+							key={key}
+							name={category.name}
+							post={postNumbers(category.id)}
+							select={() => setSelectedCategory(category)}
 						/>
-					)}
-				</div>
+					))}
 			</div>
-		);
-	} else {
-		return <LoginError />;
-	}
+			<div className='Discussion__Topic'>
+				<div className='Discussion__Heading'>
+					<p>{selectedCategory.name}</p>
+					<button
+						onClick={() => {
+							setSelectedPost('');
+							setAddPost({ title: '', content: '' });
+						}}>
+						New Post
+					</button>
+				</div>
+				<hr />
+				{post &&
+					post
+						.filter((post) => post.category_id === selectedCategory.id)
+						.map((post, id) => {
+							return (
+								<DiscussionItem
+									key={id}
+									post={post}
+									user={users}
+									comments={comment}
+									age={modifyDate(post.created_at)}
+									replies={replies}
+									selectPost={setSelectedPost}
+								/>
+							);
+						})}
+			</div>
+			<div className='Discussion__Post'>
+				{(selectedPost &&
+					post
+						.filter((post) => post.id === selectedPost)
+						.map((post, id) => {
+							return (
+								<DiscussionPost
+									key={id}
+									post={post}
+									user={users}
+									makeComment={submitComment}
+									handleComment={handleComment}
+									comments={comment}
+									modifyDate={modifyDate}
+								/>
+							);
+						})) || (
+					<DiscussionForm
+						makePost={handleSubmit}
+						handleChange={handleChange}
+						newPost={addPost}
+					/>
+				)}
+			</div>
+		</div>
+	);
 };
 
 export default Discussion;

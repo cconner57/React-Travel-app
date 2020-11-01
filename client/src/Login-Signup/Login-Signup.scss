@@ -121,20 +121,37 @@
 }
 
 .LoginError {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
 	width: 100vw;
 	height: 95vh;
+	z-index: 100;
+	background-color: $modal-bg;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	&__Background {
+		background-color: $background;
+		height: 50vh;
+		width: 40vw;
+		border-radius: 7px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
 	&__Image {
 		background: url('./safe.svg');
 		background-size: 100% 100%;
-		height: 40%;
-		width: 80%;
+		height: 70%;
+		width: 100%;
 	}
 	h5 {
-		margin-top: 1%;
+		margin-top: 1rem;
+		color: $alttext;
 		font-size: clamp(1.25rem, 3vw, 2rem);
 	}
 	
