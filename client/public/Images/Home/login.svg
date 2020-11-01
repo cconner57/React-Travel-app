@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 400 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1.04853,0,0,0.952852,-36.3094,11.5796)">
+        <path d="M300.147,63.02C300.147,56.369 295.239,50.969 289.195,50.969L161.114,50.969C155.069,50.969 150.162,56.369 150.162,63.02L150.162,228.291C150.162,234.942 155.069,240.342 161.114,240.342L289.195,240.342C295.239,240.342 300.147,234.942 300.147,228.291L300.147,63.02Z" style="fill:white;stroke:black;stroke-width:0.5px;"/>
+    </g>
+    <g transform="matrix(1,0,0,1,0,1.8904)">
+        <g transform="matrix(1.10385,0,0,1,-22.4415,-5.7687)">
+            <path d="M251.831,124.844C251.831,122.909 250.408,121.338 248.654,121.338L155.819,121.338C154.066,121.338 152.643,122.909 152.643,124.844L152.643,131.858C152.643,133.793 154.066,135.364 155.819,135.364L248.654,135.364C250.408,135.364 251.831,133.793 251.831,131.858L251.831,124.844Z" style="fill:rgb(217,217,217);stroke:black;stroke-width:0.47px;"/>
+        </g>
+        <g transform="matrix(1.40957,0,0,1.40957,-69.0301,-47.5127)">
+            <text x="157.304px" y="122.78px" style="font-family:'BradleyHandITCTT-Bold', 'Bradley Hand';font-weight:700;font-size:8.926px;">Name</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0.17963,7.84386)">
+        <g transform="matrix(1.10385,0,0,1,-22.4415,16.1137)">
+            <path d="M251.831,124.844C251.831,122.909 250.408,121.338 248.654,121.338L155.819,121.338C154.066,121.338 152.643,122.909 152.643,124.844L152.643,131.858C152.643,133.793 154.066,135.364 155.819,135.364L248.654,135.364C250.408,135.364 251.831,133.793 251.831,131.858L251.831,124.844Z" style="fill:rgb(217,217,217);stroke:black;stroke-width:0.47px;"/>
+        </g>
+        <g transform="matrix(1.40957,0,0,1.40957,-69.9402,-25.7193)">
+            <text x="157.304px" y="122.78px" style="font-family:'BradleyHandITCTT-Bold', 'Bradley Hand';font-weight:700;font-size:8.926px;">Email</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,-0.114621,13.8076)">
+        <g transform="matrix(1.10385,0,0,1,-22.4415,38.1398)">
+            <path d="M251.831,124.844C251.831,122.909 250.408,121.338 248.654,121.338L155.819,121.338C154.066,121.338 152.643,122.909 152.643,124.844L152.643,131.858C152.643,133.793 154.066,135.364 155.819,135.364L248.654,135.364C250.408,135.364 251.831,133.793 251.831,131.858L251.831,124.844Z" style="fill:rgb(217,217,217);stroke:black;stroke-width:0.47px;"/>
+        </g>
+        <g transform="matrix(1.40957,0,0,1.40957,-69.7366,-3.10464)">
+            <text x="157.304px" y="122.78px" style="font-family:'BradleyHandITCTT-Bold', 'Bradley Hand';font-weight:700;font-size:8.926px;">Password</text>
+        </g>
+    </g>
+    <g transform="matrix(1,0,0,1,0.225821,3.48825)">
+        <g transform="matrix(0.506597,0,0,1,98.3446,81.2734)">
+            <path d="M251.831,124.844C251.831,122.909 248.729,121.338 244.909,121.338L159.565,121.338C155.744,121.338 152.643,122.909 152.643,124.844L152.643,131.858C152.643,133.793 155.744,135.364 159.565,135.364L244.909,135.364C248.729,135.364 251.831,133.793 251.831,131.858L251.831,124.844Z" style="fill:rgb(0,128,255);"/>
+        </g>
+        <g transform="matrix(1,0,0,1,103.767,34.0562)">
+            <text x="79.139px" y="179.121px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:8.926px;fill:white;">Submit</text>
+        </g>
+    </g>
+    <g transform="matrix(0.710871,0,0,0.710871,24.4843,22.4974)">
+        <text x="151.618px" y="108.529px" style="font-family:'Verdana-Bold', 'Verdana', sans-serif;font-weight:700;font-size:37.64px;fill:rgb(0,128,255);">Welcome</text>
+    </g>
+</svg>

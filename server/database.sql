@@ -1,44 +1,43 @@
 CREATE DATABASE travel;
 
-CREATE TABLE users(
-    email TEXT PRIMARY KEY,
-    password TEXT NOT NULL,
-    first_name TEXT,
-    last_name TEXT,
-    created_at TIMESTAMP DEFAULT current_timestamp,
-);
-
 CREATE TABLE map(
     id SERIAL PRIMARY KEY,
-    location TEXT NOT NULL,
-    date TEXT NOT NULL,
-    plans TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT current_timestamp,
+    location VARCHAR(50) NOT NULL,
+    date VARCHAR(10) NOT NULL,
+    plans VARCHAR(500) NOT NULL,
+    zoom INTEGER NOT NULL,
+    user_id INTEGER NOT NULL REFERENCES users (id),
+    created_at TIMESTAMP DEFAULT current_timestamp
 );
 
-CREATE TABLE thread(
+CREATE TABLE users (
     id SERIAL PRIMARY KEY,
-    category TEXT NOT NULL REFERENCES users ON DELETE CASCADE,
-    thread TEXT NOT NULL,
-    message TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT current_timestamp,
+    email VARCHAR(100) NOT NULL,
+    password VARCHAR NOT NULL,
+    first_name VARCHAR(50) NOT NULL,
+    last_name VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT current_timestamp
+);
+
+CREATE TABLE category(
+    id SERIAL PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    created_at TIMESTAMP DEFAULT current_timestamp
 );
 
 CREATE TABLE post(
     id SERIAL PRIMARY KEY,
-    category TEXT NOT NULL REFERENCES users ON DELETE CASCADE,
-    title TEXT NOT NULL,
-    message TEXT NOT NULL,
-    created_at TIMESTAMP DEFAULT current_timestamp,
+    title VARCHAR(100) NOT NULL,
+    message VARCHAR(500) NOT NULL,
+    user_id INTEGER NOT NULL REFERENCES users(id),
+    category_id INTEGER NOT NULL REFERENCES thread(id),
+    created_at TIMESTAMP DEFAULT current_timestamp
 );
 
 CREATE TABLE comment(
     id SERIAL PRIMARY KEY,
-    category TEXT NOT NULL REFERENCES users ON DELETE CASCADE,
-    title TEXT NOT NULL,
-    message TEXT NOT NULL,
-    user id
-    created_at TIMESTAMP DEFAULT current_timestamp,
+    message VARCHAR NOT NULL,
+    user_id INTEGER NULL REFERENCES users (id),
+    post_id INTEGER NOT NULL REFERENCES post (id),
+    created_at TIMESTAMP DEFAULT current_timestamp
 );
-
-foreign key construct

@@ -5,6 +5,9 @@ import './Navbar.scss';
 const NavBar = () => {
 	const [show, handleNav] = useState(false);
 
+	const loggedIn = sessionStorage.getItem('loggedIn');
+	const name = JSON.parse(sessionStorage.getItem('userInfo'));
+
 	let location = useLocation();
 
 	const windowTransition = () => {
@@ -28,25 +31,33 @@ const NavBar = () => {
 			<div className='Nav__Links'>
 				<Link to='/bucket-list'>Bucket List</Link>
 				<Link to='/events'>Events</Link>
-				<Link to='/store'>Store</Link>
+				{/* <Link to='/store'>Store</Link> */}
 				<Link to='/discussion'>Discussion</Link>
 			</div>
-			<Link
-				className='Nav__Login'
-				to={{
-					pathname: `${location.pathname}/login`,
-					state: { background: location },
-				}}>
-				Login
-			</Link>
-			<Link
-				className='Nav__Signup'
-				to={{
-					pathname: `${location.pathname}/signup`,
-					state: { background: location },
-				}}>
-				Sign Up
-			</Link>
+			{loggedIn ? (
+				<div className='Nav__Access'>
+					<h5>Hello, {name.first_name}!</h5>
+				</div>
+			) : (
+				<div className='Nav__Access'>
+					<Link
+						className='Nav__Login'
+						to={{
+							pathname: `${location.pathname}/login`,
+							state: { background: location },
+						}}>
+						Login
+					</Link>
+					<Link
+						className='Nav__Signup'
+						to={{
+							pathname: `${location.pathname}/signup`,
+							state: { background: location },
+						}}>
+						Sign Up
+					</Link>
+				</div>
+			)}
 		</nav>
 	);
 };

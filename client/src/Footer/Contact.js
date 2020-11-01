@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import emailjs from 'emailjs-com';
 import './Footer.scss';
 
 const Contact = () => {
@@ -8,16 +9,39 @@ const Contact = () => {
 	const [form, setForm] = useState({ name: '', email: '', message: '' });
 
 	const { register, handleSubmit, errors } = useForm();
+	let history = useHistory();
 
-	const handleForm = () => {
+	const handleForm = async () => {
+		try {
+			let templateParams = {
+				name: form.name,
+				email: form.email,
+				message: form.message,
+			};
+			emailjs
+				.send(
+					'service_mkif6ff',
+					'template_noibelt',
+					templateParams,
+					'user_f3DauivAi5VTbaLdtvUKS'
+				)
+				.then(
+					function (response) {
+						console.log('SUCCESS!', response.status, response.text);
+					},
+					function (error) {
+						console.log('FAILED...', error);
+					}
+				);
+		} catch (error) {
+			console.log(error);
+		}
 		setIsSubmitted(true);
 	};
 
 	const handleChange = (e) => {
 		setForm({ ...form, [e.target.name]: e.target.value });
 	};
-
-	let history = useHistory();
 
 	let back = (e) => {
 		e.stopPropagation();

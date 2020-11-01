@@ -1,10 +1,12 @@
 import { combineReducers } from 'redux';
-// import postReducer from './postReducer';
-import isLoggedReducer from './isLogged'
+import markerReducer from './marker';
+import postReducer from './post';
+import commentReducer from './comment'
 
 const rootReducers = combineReducers({
-	// postReducer,
-	isLoggedReducer
-})
+	markerReducer,
+	postReducer,
+	commentReducer,
+});
 
-export default rootReducers
+export default rootReducers;

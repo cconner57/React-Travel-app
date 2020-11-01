@@ -1,15 +1,18 @@
 import React, { useEffect, useCallback } from 'react';
 import ReactDom from 'react-dom';
-import {useHistory} from 'react-router-dom'
+import { useHistory } from 'react-router-dom';
 import './App.scss';
 
 const Modal = ({ children }) => {
 	let history = useHistory();
 
-	const handleOutsideClick = useCallback((e) => {
-		const outsideForm = document.querySelector('.Modal');
-		if (e.target === outsideForm) history.goBack();
-	}, [history]);
+	const handleOutsideClick = useCallback(
+		(e) => {
+			const outsideForm = document.querySelector('.Modal');
+			if (e.target === outsideForm) history.goBack();
+		},
+		[history]
+	);
 
 	useEffect(() => {
 		window.addEventListener('click', handleOutsideClick);

@@ -1,33 +1,48 @@
 import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
-import './Login-Signup.scss'
+import axios from 'axios';
+import './Login-Signup.scss';
 
 const Signup = () => {
 	const [form, setForm] = useState({
+		first_name: '',
+		last_name: '',
 		email: '',
 		password: '',
-		password_repeat: '',
+		password2: '',
 	});
 
-	const { register, handleSubmit, watch, errors } = useForm();
+	const { register, handleSubmit, errors, watch } = useForm();
 
 	const password = useRef({});
 	password.current = watch('password', '');
-
-	const handleForm = () => {
-		console.log('Testing');
-	};
-
-	const handleChange = (e) => {
-		setForm({ ...form, [e.target.name]: e.target.value });
-	};
 
 	let history = useHistory();
 
 	let back = (e) => {
 		e.stopPropagation();
 		history.goBack();
+	};
+
+	const handleForm = async () => {
+		try {
+			const response = await axios.post('http://localhost:5000/:id/signup', {
+				first_name: form.first_name,
+				last_name: form.last_name,
+				email: form.email,
+				password: form.password,
+			});
+			sessionStorage.setItem('userInfo', JSON.stringify(response.data.data.users));
+			sessionStorage.setItem('loggedIn', response.data.data.loggedIn);
+			history.goBack();
+		} catch (error) {
+			console.log(error);
+		}
+	};
+
+	const handleChange = (e) => {
+		setForm({ ...form, [e.target.id]: e.target.value });
 	};
 
 	return (
@@ -38,8 +53,50 @@ const Signup = () => {
 			<p className='Close' onClick={back}>
 				&#x2715;
 			</p>
-			<h4 className='Signup__Heading'><span>Create</span> your account</h4>
-			<label htmlFor='email' className='Signup__Label'>Email:</label>
+			<h4 className='Signup__Heading'>
+				<span>Create</span> your account
+			</h4>
+			<label htmlFor='first_name' className='Signup__Label'>
+				First Name
+			</label>
+			<input
+				id='first_name'
+				className='Signup__Input'
+				type='text'
+				name='first_name'
+				ref={register({
+					required: '• You must enter a first name',
+					minLength: {
+						value: 2,
+						message: '• First name must have at least 2 characters',
+					},
+				})}
+				onChange={handleChange}
+			/>
+			{errors.first_name && (
+				<p className='Error'>{errors.first_name.message}</p>
+			)}
+			<label htmlFor='last_name' className='Signup__Label'>
+				Last Name
+			</label>
+			<input
+				id='last_name'
+				className='Signup__Input'
+				type='text'
+				name='last_name'
+				ref={register({
+					required: '• You must enter a last name',
+					minLength: {
+						value: 2,
+						message: '• Last name must have at least 2 characters',
+					},
+				})}
+				onChange={handleChange}
+			/>
+			{errors.last_name && <p className='Error'>{errors.last_name.message}</p>}
+			<label htmlFor='email' className='Signup__Label'>
+				Email:
+			</label>
 			<input
 				id='email'
 				className='Signup__Input'
@@ -52,7 +109,9 @@ const Signup = () => {
 				onChange={handleChange}
 			/>
 			{errors.email && <p className='Error'>• Email must be valid</p>}
-			<label htmlFor='password' className='Signup__Label'>Password:</label>
+			<label htmlFor='password' className='Signup__Label'>
+				Password:
+			</label>
 			<input
 				id='password'
 				className='Signup__Input'
@@ -68,7 +127,9 @@ const Signup = () => {
 				onChange={handleChange}
 			/>
 			{errors.password && <p className='Error'>{errors.password.message}</p>}
-			<label htmlFor='password2' className='Signup__Label'>Retype Password:</label>
+			<label htmlFor='password2' className='Signup__Label'>
+				Verify Password:
+			</label>
 			<input
 				id='password2'
 				className='Signup__Input'
@@ -76,7 +137,7 @@ const Signup = () => {
 				name='password_repeat'
 				ref={register({
 					validate: (value) =>
-						value === password.current || '• The passwords do not match',
+						value === password.current || '• Passwords do not match',
 				})}
 				onChange={handleChange}
 			/>

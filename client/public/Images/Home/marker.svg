@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 800 600" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g>
+        <g transform="matrix(1.16508,0,0,1.05013,-77.7676,-33.8001)">
+            <path d="M531.068,127.793C531.068,114.928 520.932,104.484 508.448,104.484L319.269,104.484C306.785,104.484 296.65,114.928 296.65,127.793L296.65,174.41C296.65,187.275 306.785,197.719 319.269,197.719L393.713,197.927L410.791,241.8L427.037,199.503L508.448,197.719C520.932,197.719 531.068,187.275 531.068,174.41L531.068,127.793Z" style="fill:white;stroke:black;stroke-width:0.9px;"/>
+        </g>
+        <g transform="matrix(1.1677,0,0,1.1677,-1.17482,-30.9293)">
+            <text x="297.223px" y="163.244px" style="font-family:'Verdana', sans-serif;font-size:37.501px;">Plans</text>
+        </g>
+        <g transform="matrix(1.17547,0,0,1.17547,13.5961,-26.7515)">
+            <text x="286.973px" y="120.546px" style="font-family:'Verdana', sans-serif;font-size:37.501px;">Date</text>
+        </g>
+    </g>
+    <g transform="matrix(1.38981,0,0,1.38981,-156.238,-106.228)">
+        <g transform="matrix(-1,-1.22465e-16,1.22465e-16,-1,822.947,599.539)">
+            <path d="M422.68,162.601C422.68,162.601 363.395,264.07 363.395,307.557C363.395,340.277 389.96,366.842 422.68,366.842C455.4,366.842 481.965,340.277 481.965,307.557C481.965,264.07 422.68,162.601 422.68,162.601Z" style="fill:rgb(40,128,202);stroke:black;stroke-width:0.72px;"/>
+        </g>
+        <g transform="matrix(1.1213,0,0,1.18714,-51.075,-54.9854)">
+            <ellipse cx="402.952" cy="289.665" rx="22.295" ry="21.059" style="fill:white;"/>
+        </g>
+    </g>
+</svg>

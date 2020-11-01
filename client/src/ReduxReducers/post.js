@@ -1,18 +1,18 @@
-import { FETCH_POSTS, NEW_POST } from '../ReduxActions/index';
+import { FETCH_POST, NEW_POST } from '../ReduxConstants/actionTypes';
 
-const initialState = {
-	items: [],
-	item: {},
-};
-
-export default function (state = initialState, action) {
+const postReducer = (state = [], action) => {
 	switch (action.type) {
-		case FETCH_POSTS:
+		case FETCH_POST:
 			return {
-				...state,
-				items: action.payload,
+				data: action.payload
+			}
+		case NEW_POST:
+			return {
+				data: [action.payload, ...state.data],
 			};
 		default:
 			return state;
 	}
-}
+};
+
+export default postReducer;

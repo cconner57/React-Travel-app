@@ -1,12 +1,15 @@
-import { FETCH_POSTS, NEW_POST } from './types';
+import { FETCH_POST, NEW_POST } from '../ReduxConstants/actionTypes';
 
-export const fetchPosts = () => (dispatch) => {
-	fetch('https://jsonplaceholder.typicode.com/posts')
-		.then((res) => res.json())
-		.then((posts) =>
-			dispatch({
-				type: FETCH_POSTS,
-				payload: posts,
-			})
-		);
+export const fetchPosts = (data) => {
+	return {
+		type: FETCH_POST,
+		payload: data,
+	};
+};
+
+export const newPosts = (post) => {
+	return {
+		type: NEW_POST,
+		payload: post,
+	};
 };

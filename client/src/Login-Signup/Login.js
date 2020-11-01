@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useForm } from 'react-hook-form';
+import axios from 'axios';
 import './Login-Signup.scss';
 
 const Login = () => {
@@ -8,8 +9,21 @@ const Login = () => {
 
 	const { register, handleSubmit, errors } = useForm();
 
-	const handleForm = () => {
-		console.log('Testing');
+	const handleForm = async () => {
+		try {
+			const response = await axios.post('http://localhost:5000/:id/login', {
+				email: form.email,
+				password: form.password,
+			});
+			sessionStorage.setItem(
+				'userInfo',
+				JSON.stringify(response.data.data.users)
+			);
+			sessionStorage.setItem('loggedIn', response.data.data.loggedIn);
+			history.goBack();
+		} catch (error) {
+			console.log(error);
+		}
 	};
 
 	const handleChange = (e) => {

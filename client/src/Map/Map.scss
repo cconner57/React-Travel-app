@@ -7,22 +7,43 @@
 	z-index: 1;
 	position: relative;
 }
+
 .Marker {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
 	position: absolute;
 	top: 75px;
 	right: 25px;
 	width: 200px;
-	height: 200px;
+	height: 225px;
 	z-index: 100;
 	background: $background;
 	border: 3px solid $accent;
 	border-radius: 7px;
-	padding: 20px;
+	padding: 25px;
 	box-shadow: $boxshadow;
 	&__Date {
 		user-select: none;
 	}
 	&__Description {
+		margin: 10px 0 0;
 		user-select: none;
+	}
+	textarea {
+		resize: none;
+	}
+	&__Submit {
+		margin: 10px 0 0;
+		padding: 10px 0;
+		cursor: pointer;
+		border: none;
+		border-radius: 7px;
+		color: hsl(205, 100%, 100%);
+		background-color: $accent;
+		font-size: 1.1rem;
+	}
+	&__Submit:hover {
+		background-color: $hover;
 	}
 }

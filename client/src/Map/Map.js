@@ -1,9 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { fetchMarkers, newMarker } from '../ReduxActions/markerActions';
 import { Map, TileLayer, ZoomControl, Marker, Popup } from 'react-leaflet';
 import MarkerPopup from './MarkerPopup';
+import LoginError from '../Login-Signup/LoginError'
 import 'leaflet/dist/leaflet.css';
 import L from 'leaflet';
-import './Map.scss'
+import axios from 'axios';
+import './Map.scss';
 
 delete L.Icon.Default.prototype._getIconUrl;
 
@@ -14,8 +18,11 @@ L.Icon.Default.mergeOptions({
 });
 
 const USMap = () => {
-	const [markers, setMarkers] = useState([]);
+	const [markers, setMarkers] = useState();
 	const [showPopup, setShowPopup] = useState(false);
+	const markerData = useSelector((state) => state.markerReducer.data);
+	const loggedIn = sessionStorage.getItem("loggedIn");
+	const dispatch = useDispatch();
 
 	const outer = [
 		[52, -127], //Northwest
@@ -28,39 +35,107 @@ const USMap = () => {
 		[40, -127], //West
 	];
 
-	const createMarker = (e) => {
-		console.log(e);
-		setMarkers((prevMarkers) => [
-			...prevMarkers,
-			{ latlon: [e.latlng.lat, e.latlng.lng], zoom: e.target._zoom },
-		]);
+	const placeMarker = (e) => {
+		setMarkers({
+			date: '',
+			plans: '',
+			latlon: [e.latlng.lat, e.latlng.lng],
+			zoom: e.target._zoom,
+			user: 1,
+		});
 		setShowPopup(true);
 	};
 
-	return (
-		<div className='leaflet-container'>
-			{showPopup && <MarkerPopup />}
-			<Map
-				center={[39, -97]}
-				zoom={5}
-				zoomControl={false}
-				maxBounds={outer}
-				className='Map'
-				onClick={createMarker}>
-				<TileLayer
-					url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-					attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-				/>
+	const handleChange = (e) => {
+		setMarkers({ ...markers, [e.target.name]: e.target.value });
+	};
 
-				{markers.map((marker, key) => (
-					<Marker key={key} position={marker.latlon}>
-						<Popup>Plan: See monuments</Popup>
-					</Marker>
-				))}
-				<ZoomControl position='bottomright' />
-			</Map>
-		</div>
-	);
+	useEffect(() => {
+		const getMarkers = async () => {
+			try {
+				const response = await axios.get('http://localhost:5000/bucket-list');
+				dispatch(fetchMarkers(response.data.data.threads));
+			} catch (error) {
+				console.log(error);
+			}
+		};
+		if(loggedIn) {
+			getMarkers();;
+		}
+	}, [dispatch, loggedIn]);
+
+	const createMarker = async () => {
+		try {
+			const response = await axios.post('http://localhost:5000/bucket-list', {
+				date: markers.date,
+				plans: markers.plans,
+				location: markers.latlon,
+				zoom: markers.zoom,
+				user_id: markers.user,
+			});
+			dispatch(newMarker(response.data.data.threads));
+		} catch (error) {
+			console.log(error);
+		}
+		setShowPopup(false);
+		setMarkers();
+	};
+
+	const toArray = (str) => {
+		const newArray = [];
+		const lat = str.slice(2).split(',')
+        const lon = lat[1].slice(1)
+		newArray.push(parseFloat(lat[0]), parseFloat(lon));
+		return newArray;
+	};
+
+	// UTC
+	// JSON b type Column
+	if (loggedIn) {
+		return (
+			<div className='leaflet-container'>
+				{showPopup && (
+					<MarkerPopup
+						handleChange={handleChange}
+						marker={markers}
+						createMarker={createMarker}
+					/>
+				)}
+				<Map
+					center={[39, -97]}
+					zoom={5}
+					zoomControl={false}
+					maxBounds={outer}
+					className='Map'
+					onClick={placeMarker}>
+					<TileLayer
+						url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
+						attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+					/>
+					{markers && (
+						<Marker position={markers.latlon}>
+							<Popup className='Map__Popup'>
+								<h5>Date: {markers.date}</h5>
+								<h5>Plan: {markers.plans}</h5>
+							</Popup>
+						</Marker>
+					)}
+					{markerData &&
+						markerData.map((marker, key) => (
+							<Marker key={key} position={toArray(marker.location)}>
+								<Popup className='Map__Popup'>
+									<h5>Date: {marker.date}</h5>
+									<h5>Plan: {marker.plans}</h5>
+								</Popup>
+							</Marker>
+						))}
+					<ZoomControl position='bottomright' />
+				</Map>
+			</div>
+		);
+	} else {
+		return <LoginError />;
+	}
 };
 
 export default USMap;

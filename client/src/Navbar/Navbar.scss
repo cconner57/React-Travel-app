@@ -5,32 +5,44 @@ nav {
 	position: fixed;
 	@include Center(space-between);
 	background: $accent;
-	height: 5vh;
+	height: 6vh;
 	width: 100vw;
 	z-index: 10;
 	transition: all 1s;
 	box-shadow: $boxshadow;
 	.Nav__Company {
-		font-size: 1.9rem;
-		margin: 10px 40px;
+		font-size: clamp(1rem, 2vw, 1.9rem);
+		text-align: center;
+		padding: 10px 0;
+		max-width: 35vw;
+		width: 350px;
 		font-family: 'Righteous', cursive;
 		color: $text;
 	}
 	.Nav__Links {
 		display: flex;
 		justify-content: space-between;
-		width: 550px;
+		max-width: 35vw;
+		width: 500px;
 	}
-	.Nav__Signup {
-		margin-right: 5%;
+	.Nav__Access {
+		display: flex;
+		justify-content: space-evenly;
+		max-width: 30vw;
+		width: 250px;
+		h5 {
+			color: $text;
+			font-size: clamp(0.75rem, 2vw, 1.25rem);
+			user-select: none;
+		}
 	}
 	a,
 	p {
 		color: $text;
-		transition: color .5s;
+		transition: color 0.5s;
 		cursor: pointer;
 		text-decoration: none;
-		font-size: 1.25rem;
+		font-size: clamp(0.75rem, 2vw, 1.25rem);
 	}
 	a:hover,
 	p:hover {
@@ -43,11 +55,15 @@ nav {
 	border-radius: 50px;
 	transform: translate(2.5%, 10px);
 	width: 95vw;
-	.Nav__Company, .Nav__Links > a, .Nav__Login {
+	.Nav__Company,
+	.Nav__Links > a,
+	.Nav__Login {
 		color: $text;
-		transition: color .5s;
+		transition: color 0.5s;
 	}
-	.Nav__Company:hover, .Nav__Links > a:hover, .Nav__Login:hover {
+	.Nav__Company:hover,
+	.Nav__Links > a:hover,
+	.Nav__Login:hover {
 		color: $hover;
 	}
 }

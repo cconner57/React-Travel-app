@@ -18,13 +18,15 @@ const Settings = () => {
 			<div className='Settings__Roadmap'>
 				<h1>Feature Roadmap</h1>
 				<ul>
-					<li>Loading screen between pages</li>
 					<li>Reply function in discussions</li>
+					<li>Skeleton Loading</li>
 					<li>Delete markers on map</li>
 					<li>Delete/Edit post</li>
 					<li>Lazy loading for images</li>
+					<li>Loading animation between pages</li>
 					<li>Dark Mode</li>
 					<li>Group markers by custom categories</li>
+					<li>Forgot password</li>
 					<li>Store feature</li>
 					<li>Sign In with Google, Facebook, Apple</li>
 				</ul>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 400 300" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:1.5;">
+    <g transform="matrix(1.0876,0,0,1.10659,0.467662,-0.820615)">
+        <g transform="matrix(-1,0,0,1,463.95,10.3142)">
+            <path d="M280.521,92.392C280.521,86.609 275.743,81.913 269.859,81.913L177.329,81.913C171.445,81.913 166.667,86.609 166.667,92.392L166.667,113.35C166.667,119.134 171.445,123.829 177.329,123.829L203.67,123.829L189.438,141.793L220.748,123.829L269.859,123.829C275.743,123.829 280.521,119.134 280.521,113.35L280.521,92.392Z" style="fill:white;stroke:black;stroke-width:0.46px;"/>
+        </g>
+        <g transform="matrix(1.46186,0,0,1.46186,46.1065,31.5462)">
+            <text x="108.002px" y="58.798px" style="font-family:'BradleyHandITCTT-Bold', 'Bradley Hand';font-weight:700;font-size:12px;">Where to?</text>
+        </g>
+    </g>
+    <g transform="matrix(1.0876,0,0,1.17799,-18.5592,141.984)">
+        <g transform="matrix(1,0,0,1.37819,-115.55,-188.569)">
+            <path d="M313.698,162.673C313.698,158.37 308.482,154.876 302.058,154.876L227.421,154.876C220.997,154.876 215.782,158.37 215.782,162.673L215.782,178.268C215.782,182.572 220.997,186.066 227.421,186.066L247.604,186.066L235.365,199.433L262.292,186.066L302.058,186.066C308.482,186.066 313.698,182.572 313.698,178.268L313.698,162.673Z" style="fill:rgb(40,128,200);stroke:black;stroke-width:0.36px;"/>
+        </g>
+        <g transform="matrix(1.44765,0,0,1.33026,-37.7498,-35.4804)">
+            <text x="108.002px" y="58.798px" style="font-family:'BradleyHandITCTT-Bold', 'Bradley Hand';font-weight:700;font-size:12px;fill:white;">Florida?</text>
+            <text x="108.002px" y="70.798px" style="font-family:'BradleyHandITCTT-Bold', 'Bradley Hand';font-weight:700;font-size:12px;fill:white;">Nevada?</text>
+        </g>
+    </g>
+    <g transform="matrix(1.0876,0,0,1.10659,-17.8149,-136.275)">
+        <g transform="matrix(1,0,0,1,-115.208,1.08634)">
+            <path d="M313.698,162.673C313.698,158.37 310.143,154.876 305.764,154.876L223.715,154.876C219.337,154.876 215.782,158.37 215.782,162.673L215.782,178.268C215.782,182.572 219.337,186.066 223.715,186.066L247.604,186.066L235.365,199.433L262.292,186.066L305.764,186.066C310.143,186.066 313.698,182.572 313.698,178.268L313.698,162.673Z" style="fill:rgb(40,128,200);stroke:black;stroke-width:0.46px;"/>
+        </g>
+        <g transform="matrix(1.28634,0,0,1.28634,-28.2615,99.479)">
+            <text x="108.002px" y="58.798px" style="font-family:'BradleyHandITCTT-Bold', 'Bradley Hand';font-weight:700;font-size:12px;fill:white;">Let&apos;s travel!</text>
+        </g>
+    </g>
+</svg>

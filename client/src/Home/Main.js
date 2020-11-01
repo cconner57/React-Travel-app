@@ -23,13 +23,17 @@ const Main = () => {
 
 	useEffect(() => {
 		const text = ['Travel', ' Plan', ' Explore'];
-		setTimeout(() => {
+		const interval = 
+			setTimeout(() => {
 			text.forEach((word, i) => {
 				setTimeout(() => {
 					setContent((prevWord) => [...prevWord, word]);
 				}, i * 1500);
 			});
 		}, 1500);
+		return () => {
+			clearTimeout(interval)
+		}
 	}, []);
 
 	return (

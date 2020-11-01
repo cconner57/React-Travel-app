@@ -8,9 +8,8 @@
 	height: 5vh;
 	width: 100vw;
 	z-index: 10;
-	transition: all 1s;
 	p {
-		font-size: 0.75rem;
+		font-size: clamp(0.55rem, 1vw, .75rem);
 		padding-left: 30px;
 		user-select: none;
 		color: $text;
@@ -22,6 +21,7 @@
 		padding-right: 50px;
 		width: 400px;
 		a {
+			font-size: clamp(.9rem, 2vw, 1.25rem);
 			color: $text;
 			text-decoration: none;
 			padding-left: 30px;
@@ -193,6 +193,9 @@
 		ul {
 			list-style: outside;
 			padding: 0 5px;
+		}
+		li:first-child {
+			text-decoration: line-through;
 		}
 	}
 	h1:nth-child(3) {
