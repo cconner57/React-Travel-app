@@ -17,6 +17,8 @@ const Main = () => {
 			return () => {
 				clearTimeout(hasLoaded);
 			};
+		} else {
+			setLoading(false);
 		}
 	}, []);
 
