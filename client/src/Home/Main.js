@@ -40,12 +40,12 @@ const Main = () => {
 		<>
 			<div className='Landing'>
 				<video className='Landing__Background' loop muted autoPlay>
-					<source src='./background-video.mp4' type='video/mp4' />
+					<source src='./Images/Home/background-video.mp4' type='video/mp4' />
 				</video>
 				<h5 className='Landing__Caption'>{content}</h5>
 				<div className={`Landing__Box ${hide && box.classList.add('HideBox')}`}>
 					<p>See More</p>
-					<img className='Arrow' src='./down-arrow.png' alt='See More' />
+					<img className='Arrow' src='./Images/Home/down-arrow.png' alt='See More' />
 				</div>
 			</div>
 			<Guide />
