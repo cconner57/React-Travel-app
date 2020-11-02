@@ -50,6 +50,7 @@
 			height: 100%;
 			width: 100%;
 			z-index: 10;
+			border-radius: 7px;
 			background: hsla(0, 0%, 0%, 0.4);
 			display: flex;
 			flex-direction: column;
@@ -63,6 +64,9 @@
 		.Events__Details {
 			padding-bottom: 0.8rem;
 			font-size: 1rem;
+		}
+		p {
+			user-select: none;
 		}
 	}
 }

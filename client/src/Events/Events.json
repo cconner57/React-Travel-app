@@ -143,187 +143,220 @@
 		{
 			"Date": "May 15 - 17th",
 			"Name": "Electronic Daisy Carnival (EDC)",
-			"Location": "Las Vegas, Nevada"
+			"Location": "Las Vegas, Nevada",
+			"Picture": "rave"
 		},
 		{
 			"Date": "May 21 - 25th",
 			"Name": "Strawberry Music Festival",
-			"Location": "California"
+			"Location": "California",
+			"Picture": "festival"
 		}
 	],
 	"June": [
 		{
 			"Date": "June 5 - 7th",
-			"Name": "Chicago Blues Festival - Chicago, Illinois",
-			"Location": "Pasadena, California"
+			"Name": "Chicago Blues Festival",
+			"Location": "Chicago, Illinois",
+			"Picture": "jazz2"
 		},
 		{
 			"Date": "June 11 - 14th",
-			"Name": "The Bonnaroo Music Festival - Tennesee",
-			"Location": "Pasadena, California"
+			"Name": "The Bonnaroo Music Festival",
+			"Location": "Tennesee",
+			"Picture": "concert2"
 		},
 		{
 			"Date": "June 13 - 14th",
-			"Name": "Red Earth Festival - Oklahoma",
-			"Location": "Pasadena, California"
+			"Name": "Red Earth Festival",
+			"Location": "Oklahoma",
+			"Picture": "festival"
 		},
 		{
 			"Date": "June 21 - 23rd",
-			"Name": "Cape Fear Blues Festival - Wilmington, North Carolina",
-			"Location": "Pasadena, California"
+			"Name": "Cape Fear Blues Festival",
+			"Location": "Wilmington, North Carolina",
+			"Picture": "jazz2"
 		},
 		{
 			"Date": "June 24 - 28th & 30th",
-			"Name": "Summerfest - Milwaukee, Wisconsin",
-			"Location": "Pasadena, California"
+			"Name": "Summerfest",
+			"Location": "Milwaukee, Wisconsin",
+			"Picture": "concert2"
 		},
 		{
 			"Date": "June 24 - 28th",
-			"Name": "Smithsonian Folklife Festival - Washington DC",
-			"Location": "Pasadena, California"
+			"Name": "Smithsonian Folklife Festival",
+			"Location": "Washington DC",
+			"Picture": "festival"
 		}
 	],
 	"July": [
 		{
 			"Date": "July 1 - 5th",
-			"Name": "Summerfest - Milwaukee, Wisconsin",
-			"Location": "Pasadena, California"
+			"Name": "Summerfest",
+			"Location": "Milwaukee, Wisconsin",
+			"Picture": "concert2"
 		},
 		{
 			"Date": "July 1 - 5th",
-			"Name": "Smithsonian Folklife Festival - Washington DC",
-			"Location": "Pasadena, California"
+			"Name": "Smithsonian Folklife Festival",
+			"Location": "Washington DC",
+			"Picture": "festival"
 		},
 		{
 			"Date": "July 3 - August 29th",
-			"Name": "Santa Fe Opera - Santa Fe, New Mexico",
-			"Location": "Pasadena, California"
+			"Name": "Santa Fe Opera",
+			"Location": "Santa Fe, New Mexico",
+			"Picture": "concert2"
 		},
 		{
 			"Date": "July 4th",
 			"Name": "Independence Day",
 			"Location": "USA",
-			"Picture": "fireworks.webp"
+			"Picture": "fireworks2"
 		},
 		{
 			"Date": "July 17 - 26th",
-			"Name": "Cheyenne Frontier Days - Cheyenne, Wyoming",
-			"Location": "Pasadena, California"
+			"Name": "Cheyenne Frontier Days",
+			"Location": "Cheyenne, Wyoming",
+			"Picture": "festival"
 		},
 		{
 			"Date": "July 30 - August 2nd",
-			"Name": "Lollapalooza - Chicago, Illinois",
-			"Location": "Pasadena, California"
+			"Name": "Lollapalooza",
+			"Location": "Chicago, Illinois",
+			"Picture": "festival"
 		},
 		{
 			"Date": "July 31 - August 2nd",
-			"Name": "Newport Folk Festival and Jazz Festival - Newport, Rhode Island",
-			"Location": "Pasadena, California"
+			"Name": "Newport Folk Festival and Jazz Festival",
+			"Location": "Newport, Rhode Island",
+			"Picture": "jazz2"
 		}
 	],
 	"August": [
 		{
 			"Date": "August 7 - 16th",
-			"Name": "Sturgis Motorcycle Rally - Black Hills, South Dakota",
-			"Location": "Pasadena, California"
+			"Name": "Sturgis Motorcycle Rally",
+			"Location": "Black Hills, South Dakota",
+			"Picture": "motorcycle"
 		},
 		{
 			"Date": "August 13 - 23rd",
-			"Name": "State Fair - Des Moines, Iowa",
-			"Location": "Pasadena, California"
+			"Name": "State Fair",
+			"Location": "Des Moines, Iowa",
+			"Picture": "festival"
 		},
 		{
 			"Date": "August 17 - 23rd",
-			"Name": "International Kite Festival - Long Beach, Washington",
-			"Location": "Pasadena, California"
+			"Name": "International Kite Festival",
+			"Location": "Long Beach, Washington",
+			"Picture": "kites"
 		},
 		{
 			"Date": "August 30 - September 7th",
-			"Name": "Burning Man - Reno, Nevada",
-			"Location": "Pasadena, California"
+			"Name": "Burning Man",
+			"Location": "Reno, Nevada",
+			"Picture": "burningman"
 		}
 	],
 	"September": [
 		{
 			"Date": "September 3 - 7th",
-			"Name": "Strawberry Music Festival - California",
-			"Location": "Pasadena, California"
+			"Name": "Strawberry Music Festival",
+			"Location": "California",
+			"Picture": "concert2"
 		},
 		{
 			"Date": "September 3 - 6th",
-			"Name": "Chicago Jazz Festival - Chicago, Illinois",
-			"Location": "Pasadena, California"
+			"Name": "Chicago Jazz Festival",
+			"Location": "Chicago, Illinois",
+			"Picture": "jazz"
 		},
 		{
 			"Date": "September 4 - 6th",
-			"Name": "Bumbershoot at Seattle Center - Seattle, Washington",
-			"Location": "Pasadena, California"
+			"Name": "Bumbershoot at Seattle Center",
+			"Location": "Seattle, Washington",
+			"Picture": "concert2"
 		},
 		{
 			"Date": "September 4 - 27th",
-			"Name": "Los Angeles County Fair - Los Angeles, California",
-			"Location": "Pasadena, California"
+			"Name": "Los Angeles County Fair",
+			"Location": "Los Angeles, California",
+			"Picture": "festival"
 		},
 		{
 			"Date": "September 4 - 27th",
-			"Name": "Washington State Fair - Seattle, Washington",
-			"Location": "Pasadena, California"
+			"Name": "Washington State Fair",
+			"Location": "Seattle, Washington",
+			"Picture": "festival"
 		},
 		{
 			"Date": "September 27 - 29th",
-			"Name": "Monterey Jazz Festival - California",
-			"Location": "Pasadena, California"
+			"Name": "Monterey Jazz Festival",
+			"Location": "California",
+			"Picture": "jazz2"
 		},
 		{
 			"Date": "September 29th",
-			"Name": "Folsom Street Fair - San Francisco, California",
-			"Location": "Pasadena, California"
+			"Name": "Folsom Street Fair",
+			"Location": "San Francisco, California",
+			"Picture": "festival"
 		}
 	],
 	"October": [
 		{
 			"Date": "October 4 - 6th & 11 - 13th",
-			"Name": "Austin City Limits Music Festical - Austin, Texas",
-			"Location": "Pasadena, California"
+			"Name": "Austin City Limits Music Festical",
+			"Location": "Austin, Texas",
+			"Picture": "concert2"
 		},
 		{
 			"Date": "October 3 - 11th",
-			"Name": "International Balloon Fiesta - Albuquerque, New Mexico",
-			"Location": "Pasadena, California"
+			"Name": "International Balloon Fiesta",
+			"Location": "Albuquerque, New Mexico",
+			"Picture": "hotairballoon"
 		},
 		{
 			"Date": "October 11th",
-			"Name": "Broward Carnival - Miami, Florida",
-			"Location": "Pasadena, California"
+			"Name": "Broward Carnival",
+			"Location": "Miami, Florida",
+			"Picture": "festival"
 		},
 		{
 			"Date": "October 31st",
 			"Name": "New York's Village Halloween Parade",
-			"Location": "New York City, New York"
+			"Location": "New York City, New York",
+			"Picture": "halloween"
 		}
 	],
 	"November": [
 		{
 			"Date": "November 1st",
 			"Name": "New York City Marathon",
-			"Location": "New York City, New York"
+			"Location": "New York City, New York",
+			"Picture": "marathon"
 		},
 		{
 			"Date": "November 26th",
 			"Name": "Macy's Thanksgiving Day Parade",
-			"Location": "New York City, New York"
+			"Location": "New York City, New York",
+			"Picture": "november"
 		},
 		{
 			"Date": "November 23 - December 29th",
 			"Name": "Argosy Christmas Ship Festival",
-			"Location": "Seattle, Washington"
+			"Location": "Seattle, Washington",
+			"Picture": "christmas"
 		}
 	],
 	"December": [
 		{
 			"Date": "December 31st",
 			"Name": "New Year's Eve Fireworks ",
-			"Location": "New York City, New York"
+			"Location": "New York City, New York",
+			"Picture": "fireworks"
 		}
 	]
 }
