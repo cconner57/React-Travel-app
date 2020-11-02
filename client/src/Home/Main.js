@@ -38,47 +38,46 @@ const Main = () => {
 					setContent((prevWord) => [...prevWord, word]);
 				}, i * 1500);
 			});
-		}, 1500);
+		}, 6500);
 		return () => {
 			clearTimeout(interval);
 		};
 	}, []);
 
+	useEffect(() => {
+		const videoInterval = setTimeout(() => {
+			const video = document.querySelector('.Landing__Background');
+			video.play();
+		}, 5250);
+		return () => {
+			clearTimeout(videoInterval);
+		};
+	}, []);
+
 	return (
 		<>
-			{loading && !localStorage.getItem('hasLoaded') ? (
-				<>
+			{loading && !localStorage.getItem('hasLoaded') && (
+				<div className='Loading'>
 					<img
-						className='Loading'
+						className='Loading__Image'
 						src='/Images/Home/earth-loading.svg'
 						alt='loading...'
 					/>
-				</>
-			) : (
-				<>
-					<div className='Landing'>
-						<video
-							className='Landing__Background'
-							src={video}
-							loop
-							muted
-							autoPlay></video>
-						<h5 className='Landing__Caption'>{content}</h5>
-						<div
-							className={`Landing__Box ${
-								hide && box.classList.add('HideBox')
-							}`}>
-							<p>See More</p>
-							<img
-								className='Arrow'
-								src='./Images/Home/down-arrow.png'
-								alt='See More'
-							/>
-						</div>
-					</div>
-					<Guide />
-				</>
+				</div>
 			)}
+			<div className='Landing'>
+				<video className='Landing__Background' src={video} loop muted></video>
+				<h5 className='Landing__Caption'>{content}</h5>
+				<div className={`Landing__Box ${hide && box.classList.add('HideBox')}`}>
+					<p>See More</p>
+					<img
+						className='Arrow'
+						src='./Images/Home/down-arrow.png'
+						alt='See More'
+					/>
+				</div>
+			</div>
+			<Guide />
 		</>
 	);
 };
