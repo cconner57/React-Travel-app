@@ -4,43 +4,43 @@
 			"Date": "January 1st",
 			"Name": "California Rose Parade",
 			"Location": "Pasadena, California",
-			"Picture": "new-years.webp"
+			"Picture": "new-years"
 		},
 		{
 			"Date": "January 1st",
 			"Name": "Philadelphia Mummers Parade",
 			"Location": "Philadelphia, Pennsylvania",
-			"Picture": "parade.webp"
+			"Picture": "parade"
 		},
 		{
 			"Date": "January 6th",
 			"Name": "Three Kings Day Parade",
 			"Location": "New York City, New York",
-			"Picture": "parade.webp"
+			"Picture": "parade"
 		},
 		{
 			"Date": "January 17 - 19th",
 			"Name": "Florida Art Deco Weekend",
 			"Location": "Miami, Florid",
-			"Picture": "art.webp"
+			"Picture": "art"
 		},
 		{
 			"Date": "January 23 - February 2nd",
 			"Name": "Sundance Film Festival",
 			"Location": "Salt Lake City, Utah",
-			"Picture": "film.webp"
+			"Picture": "film"
 		},
 		{
 			"Date": "January 25th",
 			"Name": "Stock Show and Rodeo",
 			"Location": "Fort Worth, Texas",
-			"Picture": "rodeo.webp"
+			"Picture": "rodeo"
 		},
 		{
 			"Date": "January 17 - February 8th",
 			"Name": "Chinese New Year Parade and Festival",
 			"Location": "New York City, New York",
-			"Picture": "chinesenewyear.webp"
+			"Picture": "chinesenewyear"
 		}
 	],
 	"February": [
@@ -48,13 +48,13 @@
 			"Date": "February 14 - 25th",
 			"Name": "Mardi Gras Galveston",
 			"Location": "Galveston, Texas",
-			"Picture": "mardigras.webp"
+			"Picture": "mardigras"
 		},
 		{
 			"Date": "February 16",
 			"Name": "Daytona 500",
 			"Location": "Daytona Beach, Florida",
-			"Picture": "racecar.webp"
+			"Picture": "racecar"
 		}
 	],
 	"March": [
@@ -62,55 +62,55 @@
 			"Date": "March 7th",
 			"Name": "Iditarod National Historic Trail",
 			"Location": "Anchorage, Alaska",
-			"Picture": "dograce.webp"
+			"Picture": "dograce"
 		},
 		{
 			"Date": "March 3 - 22nd",
 			"Name": "Houston Livestock Show and Rodeo",
 			"Location": "Houston, Texas",
-			"Picture": "rodeo.webp"
+			"Picture": "rodeo"
 		},
 		{
 			"Date": "March 5th",
 			"Name": "Mardi Gras",
 			"Location": "New Orleans, Louisiana",
-			"Picture": "mardigras.webp"
+			"Picture": "mardigras"
 		},
 		{
 			"Date": "March 8 - 17th",
 			"Name": "Bike Week",
 			"Location": "Daytona, Florida",
-			"Picture": "bike.webp"
+			"Picture": "bike"
 		},
 		{
 			"Date": "March 8 - 17th",
 			"Name": "South by Southwest Week",
 			"Location": "Austin, Texas",
-			"Picture": "film.webp"
+			"Picture": "film"
 		},
 		{
 			"Date": "March 15th",
 			"Name": "St Patrick's Day Parade",
 			"Location": "Chicago, Illinois",
-			"Picture": "stpatrick.webp"
+			"Picture": "stpatrick"
 		},
 		{
 			"Date": "March 15th",
 			"Name": "St Patrick's Day Parade",
 			"Location": "Boston, Massachusetts",
-			"Picture": "stpatrick.webp"
+			"Picture": "stpatrick"
 		},
 		{
 			"Date": "March 15th",
 			"Name": "St Patrick's Day Parade",
 			"Location": "New York City, New York",
-			"Picture": "stpatrick.webp"
+			"Picture": "stpatrick"
 		},
 		{
 			"Date": "March 15th",
 			"Name": "St Patrick's Day Parade",
 			"Location": "San Francisco, California",
-			"Picture": "stpatrick.webp"
+			"Picture": "stpatrick"
 		}
 	],
 	"April": [
@@ -118,25 +118,25 @@
 			"Date": "April 10 - 12th",
 			"Name": "Coachella Valley Music and Art Festival",
 			"Location": "California",
-			"Picture": "concert.webp"
+			"Picture": "concert"
 		},
 		{
 			"Date": "April 17 - 19th",
 			"Name": "Coachella Valley Music and Art Festival",
 			"Location": "California",
-			"Picture": "concert.webp"
+			"Picture": "concert"
 		},
 		{
 			"Date": "April 16 - 26th",
 			"Name": "Fiesta San Antonio",
 			"Location": "San Antonio, Texas",
-			"Picture": "fiesta.webp"
+			"Picture": "fiesta"
 		},
 		{
 			"Date": "April 23 - May 3rd",
 			"Name": "New Orleans Jazz and Heritage Festival",
 			"Location": "New Orleans, Louisiana",
-			"Picture": "jazz.webp"
+			"Picture": "jazz"
 		}
 	],
 	"May": [
@@ -203,7 +203,7 @@
 			"Date": "July 4th",
 			"Name": "Independence Day",
 			"Location": "USA",
-			"Picture": "fireworks.jpg"
+			"Picture": "fireworks.webp"
 		},
 		{
 			"Date": "July 17 - 26th",
