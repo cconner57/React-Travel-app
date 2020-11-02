@@ -15,7 +15,8 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		z-index: -1;
-		height: 105vh;
+		height: 110%;
+		background-color: $accent;
 	}
 	&__Caption {
 		position: absolute;
