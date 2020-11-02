@@ -9,10 +9,15 @@ const Main = () => {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		setTimeout(() => {
-			setLoading(false);
-			localStorage.setItem('hasLoaded', true);
-		}, 5000);
+		if (!localStorage.getItem('hasLoaded')) {
+			const hasLoaded = setTimeout(() => {
+				setLoading(false);
+				localStorage.setItem('hasLoaded', true);
+			}, 5000);
+			return () => {
+				clearTimeout(hasLoaded);
+			};
+		}
 	}, []);
 
 	const box = document.querySelector('.Landing__Box');
@@ -45,13 +50,18 @@ const Main = () => {
 	}, []);
 
 	useEffect(() => {
-		const videoInterval = setTimeout(() => {
+		if (!localStorage.getItem('hasLoaded')) {
+			const videoInterval = setTimeout(() => {
+				const video = document.querySelector('.Landing__Background');
+				video.play();
+			}, 5250);
+			return () => {
+				clearTimeout(videoInterval);
+			};
+		} else {
 			const video = document.querySelector('.Landing__Background');
 			video.play();
-		}, 5250);
-		return () => {
-			clearTimeout(videoInterval);
-		};
+		}
 	}, []);
 
 	return (
