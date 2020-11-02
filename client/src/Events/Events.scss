@@ -3,7 +3,6 @@
 
 .Events {
 	width: 100vw;
-	height: 100vh;
 	display: flex;
 	flex-direction: column;
 	overflow: auto;
@@ -13,7 +12,6 @@
 	.Events__ItemList {
 		display: flex;
 		flex-wrap: wrap;
-		// width: 100%;
 		margin-left: 5%;
 		color: $text;
 		user-select: none;
@@ -24,7 +22,7 @@
 			height: 5rem;
 			margin: 20px 0 10px;
 			color: $alttext;
-			font-family: 'Righteous', cursive;
+			font-family: 'Righteous', 'Courier New';
 		}
 		.Events__Item {
 			margin: 10px 20px;
@@ -38,7 +36,7 @@
 		.Events__ItemOverlay {
 			height: 100%;
 			width: 100%;
-			background: hsla(0, 0%, 0%, .4);
+			background: hsla(0, 0%, 0%, 0.4);
 		}
 		.Events__Date {
 			padding-top: 20px;
