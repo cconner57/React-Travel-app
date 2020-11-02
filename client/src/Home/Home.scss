@@ -54,7 +54,7 @@
 	}
 	.Arrow {
 		width: 1.5625rem;
-		margin: .625rem 0 0;
+		margin: 0.625rem 0 0;
 	}
 }
 
@@ -96,8 +96,12 @@
 	left: 0;
 	position: absolute;
 	background-color: white;
+	z-index: 5;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	&__Image {
-
+		height: 80vh;
 	}
 }
 

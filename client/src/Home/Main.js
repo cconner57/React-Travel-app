@@ -77,7 +77,7 @@ const Main = () => {
 					/>
 				</div>
 			</div>
-			<Guide />
+			{!loading && <Guide />}
 		</>
 	);
 };
