@@ -24,11 +24,11 @@
 	padding: 25px;
 	box-shadow: $boxshadow;
 	&__Date {
-		user-select: none;
+		@include User-Select();
 	}
 	&__Description {
+		@include User-Select();
 		margin: 10px 0 0;
-		user-select: none;
 	}
 	textarea {
 		resize: none;

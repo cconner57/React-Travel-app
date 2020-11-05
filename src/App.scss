@@ -30,6 +30,13 @@ $boxshadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 	align-items: center;
 }
 
+@mixin User-Select {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
 .App {
 	position: relative;
 	font-family: 'Roboto Condensed', sans-serif;

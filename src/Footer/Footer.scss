@@ -54,9 +54,9 @@
 	max-width: 50%;
 	font-family: 'Roboto Condensed', sans-serif;
 	&__Heading {
+		@include User-Select();
 		display: flex;
 		justify-content: center;
-		user-select: none;
 	}
 	h4 {
 		font-weight: bold;
@@ -142,9 +142,9 @@
 		width: auto;
 
 		p {
+			@include User-Select();
 			margin-top: 35px;
 			font-size: 20px;
-			user-select: none;
 		}
 	}
 	&__Image {
@@ -159,16 +159,16 @@
 	@include Modal-Container();
 	font-family: 'Roboto Condensed', sans-serif;
 	h5 {
+		@include User-Select();
 		margin-bottom: 20px;
 		font-size: 1.25rem;
 		text-align: center;
 		color: $text;
-		user-select: none;
 	}
 	p {
+		@include User-Select();
 		font-size: 1rem;
 		margin-bottom: 15px;
-		user-select: none;
 	}
 	a {
 		margin: 0 auto;

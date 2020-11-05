@@ -2,8 +2,8 @@
 @import './../App.scss';
 
 nav {
-	position: fixed;
 	@include Center(space-between);
+	position: fixed;
 	background: $accent;
 	height: 6vh;
 	width: 100vw;
@@ -31,9 +31,9 @@ nav {
 		max-width: 30vw;
 		width: 250px;
 		h5 {
+			@include User-Select();
 			color: $text;
 			font-size: clamp(0.75rem, 2vw, 1.25rem);
-			user-select: none;
 		}
 	}
 	a,

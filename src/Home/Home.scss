@@ -19,6 +19,7 @@
 		background-color: $accent;
 	}
 	&__Caption {
+		@include User-Select();
 		position: absolute;
 		top: 35%;
 		left: 20%;
@@ -27,7 +28,6 @@
 		font-size: clamp(4rem, 7vw, 6rem);
 		font-family: 'Righteous', cursive;
 		animation: fadeIn 3s ease;
-		user-select: none;
 	}
 	&__Box {
 		@include Center();
@@ -40,8 +40,8 @@
 		border-radius: 7px;
 		width: 6.25rem;
 		height: 3.75rem;
-		user-select: none;
 		transition: opacity 1s;
+		@include User-Select();
 		p {
 			width: 5rem;
 			font-size: 14px;
@@ -61,7 +61,7 @@
 
 .Guide {
 	@include Center();
-	user-select: none;
+	@include User-Select();
 	width: 100vw;
 	height: 95vh;
 	flex-direction: column;
