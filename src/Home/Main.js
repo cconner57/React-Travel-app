@@ -39,17 +39,20 @@ const Main = () => {
 
 	useEffect(() => {
 		const text = ['Travel', ' Plan', ' Explore'];
-		const interval = setTimeout(() => {
-			text.forEach((word, i) => {
-				setTimeout(() => {
-					setContent((prevWord) => [...prevWord, word]);
-				}, i * 1500);
-			});
-		}, 6500);
+		const interval = setTimeout(
+			() => {
+				text.forEach((word, i) => {
+					setTimeout(() => {
+						setContent((prevWord) => [...prevWord, word]);
+					}, i * 1500);
+				});
+			},
+			loading ? 6500 : 4500
+		);
 		return () => {
 			clearTimeout(interval);
 		};
-	}, []);
+	}, [loading]);
 
 	useEffect(() => {
 		if (!localStorage.getItem('hasLoaded')) {
