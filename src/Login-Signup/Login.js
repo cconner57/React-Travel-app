@@ -11,7 +11,7 @@ const Login = () => {
 
 	const handleForm = async () => {
 		try {
-			const response = await axios.post('https://travel-buddy.vacations/:id/login', {
+			const response = await axios.post('https://travel-buddy1.herokuapp.com/:id/login', {
 				email: form.email,
 				password: form.password,
 			});

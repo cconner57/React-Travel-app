@@ -39,7 +39,7 @@ const Discussion = () => {
 	useEffect(() => {
 		const fetchCatagories = async () => {
 			try {
-				const response = await axios.get('https://travel-buddy.vacations/discussion');
+				const response = await axios.get('https://travel-buddy1.herokuapp.com/discussion');
 				dispatch(fetchPosts(response.data.data.post));
 				dispatch(fetchComments(response.data.data.comment));
 				setCategory(response.data.data.category);
@@ -67,7 +67,7 @@ const Discussion = () => {
 
 	const handleSubmit = async () => {
 		try {
-			const response = await axios.post('https://travel-buddy.vacations/discussion', {
+			const response = await axios.post('https://travel-buddy1.herokuapp.com/discussion', {
 				title: addPost.title,
 				content: addPost.content,
 				category_id: addPost.category.id,
@@ -82,7 +82,7 @@ const Discussion = () => {
 
 	const submitComment = async () => {
 		try {
-			const response = await axios.post('https://travel-buddy.vacations/discussion', {
+			const response = await axios.post('https://travel-buddy1.herokuapp.com/discussion', {
 				comment: addComment.comment,
 				user_id: name.id,
 				post_id: addComment.post_id,
