@@ -183,4 +183,3 @@ const Discussion = () => {
 };
 
 export default Discussion;
-module.exports = {postNumbers, modifyDate};
