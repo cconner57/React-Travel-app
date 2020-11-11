@@ -5,7 +5,7 @@ import { Map, TileLayer, ZoomControl, Marker, Popup } from 'react-leaflet';
 import MarkerPopup from './MarkerPopup';
 import LoginError from '../Login-Signup/LoginError';
 import 'leaflet/dist/leaflet.css';
-import L from 'leaflet';
+import L, { marker } from 'leaflet';
 import axios from 'axios';
 import './Map.scss';
 
@@ -53,8 +53,15 @@ const USMap = () => {
 	useEffect(() => {
 		const getMarkers = async () => {
 			try {
-				const response = await axios.get('https://travel-buddy1.herokuapp.com/bucket-list');
-				dispatch(fetchMarkers(response.data.data.threads));
+				const response = await axios.get(
+					'https://travel-buddy1.herokuapp.com/bucket-list',
+					{
+						params: {
+							ID: markers.user,
+						},
+					}
+				);
+				dispatch(fetchMarkers(response.data.data.markers));
 			} catch (error) {
 				console.log(error);
 			}
@@ -66,13 +73,16 @@ const USMap = () => {
 
 	const createMarker = async () => {
 		try {
-			const response = await axios.post('https://travel-buddy1.herokuapp.com/bucket-list', {
-				date: markers.date,
-				plans: markers.plans,
-				location: markers.latlon,
-				zoom: markers.zoom,
-				user_id: markers.user,
-			});
+			const response = await axios.post(
+				'https://travel-buddy1.herokuapp.com/bucket-list',
+				{
+					date: markers.date,
+					plans: markers.plans,
+					location: markers.latlon,
+					zoom: markers.zoom,
+					user_id: markers.user,
+				}
+			);
 			dispatch(newMarker(response.data.data.markers));
 		} catch (error) {
 			console.log(error);
