@@ -5,7 +5,7 @@ import { Map, TileLayer, ZoomControl, Marker, Popup } from 'react-leaflet';
 import MarkerPopup from './MarkerPopup';
 import LoginError from '../Login-Signup/LoginError';
 import 'leaflet/dist/leaflet.css';
-import L, { marker } from 'leaflet';
+import L from 'leaflet';
 import axios from 'axios';
 import './Map.scss';
 
@@ -69,7 +69,7 @@ const USMap = () => {
 		if (loggedIn) {
 			getMarkers();
 		}
-	}, [dispatch, loggedIn]);
+	}, [dispatch, loggedIn, markers]);
 
 	const createMarker = async () => {
 		try {
