@@ -73,7 +73,7 @@ const USMap = () => {
 				zoom: markers.zoom,
 				user_id: markers.user,
 			});
-			dispatch(newMarker(response.data.data.threads));
+			dispatch(newMarker(response.data.data.markers));
 		} catch (error) {
 			console.log(error);
 		}
