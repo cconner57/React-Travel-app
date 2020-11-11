@@ -53,7 +53,7 @@ const USMap = () => {
 	useEffect(() => {
 		const getMarkers = async () => {
 			try {
-				const response = await axios.get('https://travel-buddy.vacations/bucket-list');
+				const response = await axios.get('https://travel-buddy1.herokuapp.com/bucket-list');
 				dispatch(fetchMarkers(response.data.data.threads));
 			} catch (error) {
 				console.log(error);
@@ -66,7 +66,7 @@ const USMap = () => {
 
 	const createMarker = async () => {
 		try {
-			const response = await axios.post('https://travel-buddy.vacations/bucket-list', {
+			const response = await axios.post('https://travel-buddy1.herokuapp.com/bucket-list', {
 				date: markers.date,
 				plans: markers.plans,
 				location: markers.latlon,
