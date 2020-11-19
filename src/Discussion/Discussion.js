@@ -28,7 +28,7 @@ const Discussion = () => {
 	const [addPost, setAddPost] = useState({
 		title: '',
 		content: '',
-		category: selectedCategory,
+		category: selectedCategory.id,
 	});
 
 	const [addComment, setAddComment] = useState({
@@ -70,7 +70,7 @@ const Discussion = () => {
 			const response = await axios.post('https://travel-buddy1.herokuapp.com/discussion', {
 				title: addPost.title,
 				content: addPost.content,
-				category_id: addPost.category.id,
+				category_id: addPost.category,
 				user_id: name.id,
 			});
 			setSelectedPost(response.data.data.threads.id);
