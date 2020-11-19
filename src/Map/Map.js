@@ -70,7 +70,7 @@ const USMap = () => {
 		if (loggedIn) {
 			getMarkers();
 		}
-	}, [dispatch, loggedIn, markers, userInfo.id]);
+	}, [dispatch, loggedIn, markers, userInfo?.id]);
 
 	const createMarker = async () => {
 		try {
