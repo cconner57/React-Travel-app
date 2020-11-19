@@ -22,7 +22,9 @@ const USMap = () => {
 	const [showPopup, setShowPopup] = useState(false);
 	const markerData = useSelector((state) => state.markerReducer.data);
 	const loggedIn = sessionStorage.getItem('loggedIn');
-	const userInfo = JSON.parse(sessionStorage.getItem('userInfo'))
+	const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
+	const { id } = userInfo;
+	console.log(id);
 	const dispatch = useDispatch();
 
 	const outer = [
@@ -58,7 +60,7 @@ const USMap = () => {
 					'https://travel-buddy1.herokuapp.com/bucket-list',
 					{
 						params: {
-							ID: userInfo.id,
+							ID: id,
 						},
 					}
 				);
@@ -70,7 +72,7 @@ const USMap = () => {
 		if (loggedIn) {
 			getMarkers();
 		}
-	}, [dispatch, loggedIn, markers, userInfo?.id]);
+	}, [dispatch, loggedIn, markers, id]);
 
 	const createMarker = async () => {
 		try {
