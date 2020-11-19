@@ -22,6 +22,7 @@ const USMap = () => {
 	const [showPopup, setShowPopup] = useState(false);
 	const markerData = useSelector((state) => state.markerReducer.data);
 	const loggedIn = sessionStorage.getItem('loggedIn');
+	const userInfo = JSON.parse(sessionStorage.getItem('userInfo'))
 	const dispatch = useDispatch();
 
 	const outer = [
@@ -35,7 +36,6 @@ const USMap = () => {
 		[40, -127], //West
 	];
 
-	const userInfo = JSON.parse(sessionStorage.getItem('userInfo'))
 
 	const placeMarker = (e) => {
 		setMarkers({
@@ -43,7 +43,7 @@ const USMap = () => {
 			plans: '',
 			latlon: [e.latlng.lat, e.latlng.lng],
 			zoom: e.target._zoom,
-			user: 1,
+			user: userInfo.id,
 		});
 		setShowPopup(true);
 	};
@@ -71,7 +71,7 @@ const USMap = () => {
 		if (loggedIn) {
 			getMarkers();
 		}
-	}, [dispatch, loggedIn, markers, userInfo]);
+	}, [dispatch, loggedIn, markers, userInfo.id]);
 
 	const createMarker = async () => {
 		try {
