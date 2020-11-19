@@ -11,10 +11,13 @@ const Login = () => {
 
 	const handleForm = async () => {
 		try {
-			const response = await axios.post('https://travel-buddy1.herokuapp.com/:id/login', {
-				email: form.email,
-				password: form.password,
-			});
+			const response = await axios.post(
+				'https://travel-buddy1.herokuapp.com/:id/login',
+				{
+					email: form.email.toLowerCase(),
+					password: form.password,
+				}
+			);
 			sessionStorage.setItem(
 				'userInfo',
 				JSON.stringify(response.data.data.users)
