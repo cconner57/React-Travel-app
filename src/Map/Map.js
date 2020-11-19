@@ -20,7 +20,7 @@ L.Icon.Default.mergeOptions({
 const USMap = () => {
 	const [markers, setMarkers] = useState(null);
 	const [showPopup, setShowPopup] = useState(false);
-	const [userInfo, setUserInfo] = useState(JSON.parse(sessionStorage.getItem('userInfo')))
+	const [userInfo] = useState(JSON.parse(sessionStorage.getItem('userInfo')))
 	const markerData = useSelector((state) => state.markerReducer.data);
 	const loggedIn = sessionStorage.getItem('loggedIn');
 	// const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
