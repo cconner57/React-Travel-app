@@ -36,7 +36,6 @@ const USMap = () => {
 		[40, -127], //West
 	];
 
-
 	const placeMarker = (e) => {
 		setMarkers({
 			date: '',

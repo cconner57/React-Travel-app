@@ -20,7 +20,7 @@ const Discussion = () => {
 	const [users, setUsers] = useState([]);
 	const [category, setCategory] = useState([]);
 	const [selectedCategory, setSelectedCategory] = useState({
-		id: 1,
+		id: name.id,
 		name: 'General',
 	});
 	const [selectedPost, setSelectedPost] = useState(undefined);
@@ -33,13 +33,15 @@ const Discussion = () => {
 
 	const [addComment, setAddComment] = useState({
 		post_id: '',
-		content: '',
+		comment: '',
 	});
 
 	useEffect(() => {
 		const fetchCatagories = async () => {
 			try {
-				const response = await axios.get('https://travel-buddy1.herokuapp.com/discussion');
+				const response = await axios.get(
+					'https://travel-buddy1.herokuapp.com/discussion'
+				);
 				dispatch(fetchPosts(response.data.data.post));
 				dispatch(fetchComments(response.data.data.comment));
 				setCategory(response.data.data.category);
@@ -67,12 +69,15 @@ const Discussion = () => {
 
 	const handleSubmit = async () => {
 		try {
-			const response = await axios.post('https://travel-buddy1.herokuapp.com/discussion', {
-				title: addPost.title,
-				content: addPost.content,
-				category_id: addPost.category,
-				user_id: name.id,
-			});
+			const response = await axios.post(
+				'https://travel-buddy1.herokuapp.com/discussion',
+				{
+					title: addPost.title,
+					content: addPost.content,
+					user_id: name.id,
+					category_id: addPost.category,
+				}
+			);
 			setSelectedPost(response.data.data.threads.id);
 			dispatch(newPosts(response.data.data.threads));
 		} catch (error) {
@@ -82,11 +87,14 @@ const Discussion = () => {
 
 	const submitComment = async () => {
 		try {
-			const response = await axios.post('https://travel-buddy1.herokuapp.com/discussion', {
-				comment: addComment.comment,
-				user_id: name.id,
-				post_id: addComment.post_id,
-			});
+			const response = await axios.post(
+				'https://travel-buddy1.herokuapp.com/discussion',
+				{
+					comment: addComment.comment,
+					user_id: name.id,
+					post_id: addComment.post_id,
+				}
+			);
 			dispatch(newComments(response.data.data.comments));
 		} catch (error) {
 			console.log(error);
