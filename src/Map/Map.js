@@ -20,11 +20,10 @@ L.Icon.Default.mergeOptions({
 const USMap = () => {
 	const [markers, setMarkers] = useState(null);
 	const [showPopup, setShowPopup] = useState(false);
+	const [userInfo, setUserInfo] = useState(JSON.parse(sessionStorage.getItem('userInfo')))
 	const markerData = useSelector((state) => state.markerReducer.data);
 	const loggedIn = sessionStorage.getItem('loggedIn');
-	const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
-	const { id } = userInfo;
-	console.log(id);
+	// const userInfo = JSON.parse(sessionStorage.getItem('userInfo'));
 	const dispatch = useDispatch();
 
 	const outer = [
@@ -60,7 +59,7 @@ const USMap = () => {
 					'https://travel-buddy1.herokuapp.com/bucket-list',
 					{
 						params: {
-							ID: id,
+							ID: userInfo.id,
 						},
 					}
 				);
@@ -72,7 +71,7 @@ const USMap = () => {
 		if (loggedIn) {
 			getMarkers();
 		}
-	}, [dispatch, loggedIn, markers, id]);
+	}, [dispatch, loggedIn, markers, userInfo]);
 
 	const createMarker = async () => {
 		try {
