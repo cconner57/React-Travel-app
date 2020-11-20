@@ -15,11 +15,9 @@ npm start
 
 ## Usage
 ![Create Account](client/../public/Images/Home/create-account.png)
-
 ![Select Location](client/../public/Images/Home/select-location.png)
 
 ![Add Details to Marker](client/../public/Images/Home/edit-marker.png)
-
 ![Discuss in Forum](client/../public/Images/Home/discussion.png)
 
 ## Support
