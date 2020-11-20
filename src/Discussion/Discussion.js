@@ -13,13 +13,14 @@ import './Discussion.scss';
 const Discussion = () => {
 	const post = useSelector((state) => state.postReducer.data);
 	const comment = useSelector((state) => state.commentReducer.data);
-	const [name] = useState(JSON.parse(sessionStorage.getItem('userInfo')))
 	const loggedIn = sessionStorage.getItem('loggedIn');
+	const name = JSON.parse(sessionStorage.getItem('userInfo'));
 	const dispatch = useDispatch();
+
 	const [users, setUsers] = useState([]);
 	const [category, setCategory] = useState([]);
 	const [selectedCategory, setSelectedCategory] = useState({
-		id: name.id,
+		id: 1,
 		name: 'General',
 	});
 	const [selectedPost, setSelectedPost] = useState(undefined);
@@ -128,7 +129,7 @@ const Discussion = () => {
 							key={key}
 							name={category.name}
 							post={postNumbers(category.id)}
-							select={() => setSelectedCategory(category)}
+							select={() => setSelectedCategory({ id: key + 1, name: category.name })}
 						/>
 					))}
 			</div>
