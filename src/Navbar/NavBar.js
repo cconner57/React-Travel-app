@@ -26,7 +26,7 @@ const NavBar = () => {
 	return (
 		<nav className={show ? 'Nav__Active' : ''}>
 			<Link className='Nav__Company' to='/home'>
-				Buddy Planner
+				Travel Buddy
 			</Link>
 			<div className='Nav__Links'>
 				<Link to='/bucket-list'>Bucket List</Link>
